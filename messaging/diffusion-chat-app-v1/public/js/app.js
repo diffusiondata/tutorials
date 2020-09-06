@@ -41,7 +41,7 @@ form.onsubmit = (evt) => {
 // Sign up to Diffusion Cloud and get your service up a running in a minute.
 diffusion.connect({
     host : "diffusionchatapp.eu.diffusion.cloud",
-    principal : "admin",
+    principal : "user",
     credentials : "password"
 }).then(
     (session) => {
