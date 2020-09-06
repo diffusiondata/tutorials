@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Diffusion Chat</title>
+    <link href="./images/logo.png" rel="icon" type="image/png"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <style>.well {margin-top: 35px;}</style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 well" style="background-image: url(./images/cloud-overview-header.jpg)">
+          <a class="btn btn-info " style="background-color:#3d3d3d;" href="../index.html">
+            <i class="fa fa-cog"></i>
+            Settings</a>
+          <h1 id="room-title" class="text-center" style="color:White;"></h1>
+          <ul id="messages" class="messages list-group">
+            <!-- chat messages will be shown here -->
+          </ul>
+          <form id="messageForm">
+            <div class="form-group">
+              <i class="" id="icon-type"></i>
+              <p class="help-block typing"></p>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-comment"></i>
+                </span>
+                <input autofocus class="form-control" id="messagebox" name="message" type="text" value=""/>
+              </div>
+            </div>
+            <div class="form-group">
+	            <input class="btn btn-primary btn-block" style="background-color:#3d3d3d;" type="submit"/>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src='https://download.pushtechnology.com/clients/6.5.1/js/diffusion-6.5.1.js'></script>
+    <script src="js/QueryParams.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
