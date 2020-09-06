@@ -38,7 +38,7 @@ form.onsubmit = (evt) => {
 // Connect to your Diffusion service as admin to add new users, or leave this values and connect to our sandbox
 diffusion.connect({
     host : "diffusionchatapp.eu.diffusion.cloud",
-    principal : 'admin',
+    principal : 'auth-handler',
     credentials : 'password'
 }).then(
     (session) => {

@@ -36,7 +36,7 @@
                   <span class="input-group-addon">
                     <i class="glyphicon glyphicon-eye-close"></i>
                   </span>
-                  <input class="form-control" id="password" name="password" placeholder="" type="password"  onkeyup='check();' required>
+                  <input class="form-control" id="password" name="password" placeholder="" type="password" onkeyup='check();' required>
                 </div>
               </div>
               <div class="form-group">
@@ -45,12 +45,9 @@
                   <span class="input-group-addon">
                     <i class="glyphicon glyphicon-eye-close"></i>
                   </span>
-                  <input class="form-control" id="confirm_password" name="confirm_password" placeholder="" type="password"  onkeyup='check();' required>
+                  <input class="form-control" id="confirm_password" name="confirm_password" placeholder="" type="password"  onkeyup='check();'>
                 </div>
               </div> 
-              <div>
-                <label id="check"></label>
-              </div>
               <div class="form-group">
                 <label for="room" style="color:White;">Chat Room :</label>
                 <div class="input-group">
@@ -71,13 +68,9 @@
     <script>
       var check = function() {
         if (document.getElementById('password').value == document.getElementById('confirm_password').value) {
-          document.getElementById('check').style.color = 'green';
-          document.getElementById('check').style.backgroundColor = 'white';
-          document.getElementById('check').innerHTML = ' matching ';
+        	confirm_password.setCustomValidity('');
         } else {
-          document.getElementById('check').style.color = 'red';
-          document.getElementById('check').style.backgroundColor = 'white';
-          document.getElementById('check').innerHTML = ' not matching ';
+        	confirm_password.setCustomValidity("Passwords Don't Match");
         }
       }
     </script>
