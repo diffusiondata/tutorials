@@ -12,20 +12,20 @@ diffusion-chat-app-v2 introduces de concept of Time Series.
 
 ```
 diffusion.topics.TopicSpecification(diffusion.topics.TopicType.TIME_SERIES, 
-				{
-					TIME_SERIES_EVENT_VALUE_TYPE : "json",
-					TIME_SERIES_RETAINED_RANGE: "limit 100",
-					TIME_SERIES_SUBSCRIPTION_RANGE: "limit 100"
-				});
+	{
+		TIME_SERIES_EVENT_VALUE_TYPE : "json",
+		TIME_SERIES_RETAINED_RANGE: "limit 100",
+		TIME_SERIES_SUBSCRIPTION_RANGE: "limit 100"
+	});
 ```
 ```
 session.timeseries.append(_roomTopic,
-				{
-					text: msg 
-					name: name,
-					timestamp: new Date().toLocaleTimeString()
-				},
-				diffusion.datatypes.json());
+	{
+		text: msg 
+		name: name,
+		timestamp: new Date().toLocaleTimeString()
+	},
+	diffusion.datatypes.json());
 ```
 			   
 

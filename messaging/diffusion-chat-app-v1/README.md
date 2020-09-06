@@ -26,13 +26,12 @@ session.addStream(_roomTopic, diffusion.datatypes.json());
 session.select(_roomTopic);
 ```
 ```
-session.topicUpdate.set(_roomTopic, diffusion.datatypes.json(), 
+session.topicUpdate.set(_roomTopic, diffusion.datatypes.json(),
 	{
-		text: name + " has joined",
-		name: "System",
+		text: msg,
+		name: name,
 		timestamp: new Date().toLocaleTimeString()
-	}
-);
+	});
 ```
 
 # Requirements
