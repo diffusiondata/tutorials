@@ -7,8 +7,10 @@ Here, you will find complete code examples on a variety of programing languages 
 * Messaging Apps
 * Data Store Apps
 * Web & Mobile Apps
-
-* Please refer to the [online documentation](https://docs.pushtechnology.com/) for further details.
+------------------
+ All our examples include a README file describing the diferent features we will use from our SDK.
+ 
+ Please refer to the [online documentation](https://docs.pushtechnology.com/) for further details.
 
 ------------------
 [Diffusion Intelligent Data Mesh](https://www.pushtechnology.com)
