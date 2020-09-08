@@ -4,6 +4,7 @@ This project contains example code that demonstrates the use of the [Diffusion](
 
 Please refer to the online documentation for further details.
 
+------------------
 [Diffusion Intelligent Data Mesh](https://www.pushtechnology.com)
 
 Modernize your Real-Time Applications with our easily adoptable,
