@@ -6,7 +6,7 @@ A simple projects, illustrating production and consumption of chat messages to a
 
 # Version 1
 
-diffusion-chat-app-v1 introduces de concept of Publish and Subscribe to topics (data structures).
+*diffusion-chat-app-v1* introduces de concept of Publish and Subscribe to topics (data structures).
 
 # From our SDK
 
