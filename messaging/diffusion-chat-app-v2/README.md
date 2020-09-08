@@ -10,7 +10,7 @@ A simple projects, illustrating production and consumption of chat messages to a
 
 # From our SDK
 
-* [diffusion.topics.TopicSpecification](https://docs.pushtechnology.com/docs/6.5.1/js/classes/topicspecification.html) [TopicType.TIME_SERIES](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#topictypeenum.time_series)
+* [diffusion.topics.TopicSpecification](https://docs.pushtechnology.com/docs/6.5.1/js/classes/topicspecification.html) - [TopicType.TIME_SERIES](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#topictypeenum.time_series)
 
 ```
 diffusion.topics.TopicSpecification(diffusion.topics.TopicType.TIME_SERIES, 
