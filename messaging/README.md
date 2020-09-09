@@ -2,7 +2,7 @@
 
 # Real-Time Messaging
 
-Introduction to Diffusion Real-Time Messaging through a messaging application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
+Introduction to Diffusion Real-Time Messaging through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
 
 Users can chat in realtime across various meeting rooms.
 
