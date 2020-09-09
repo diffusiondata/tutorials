@@ -1,8 +1,10 @@
+<img src="https://www.pushtechnology.com/wp-content/themes/pushtechnology/img/diffusion-padding-bottom.png" height="80" title="Logo">
+
 # Diffusion-chat-app
 
 This is sample chat application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
 Users can chat in realtime across various meeting rooms.
-A simple projects, illustrating production and consumption of chat messages to and from a Diffusion Cloud instance.
+A simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
 
 # Version 1
 [diffusion-chat-app-v1](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v1) introduces de concept of Publish and Subscribe to topics (data structures).
