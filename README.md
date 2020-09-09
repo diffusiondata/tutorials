@@ -7,8 +7,8 @@ This project contains example code that demonstrates the use of the [Diffusion](
 Here, you will find complete code examples on a variety of programing languages (Javascript for now) to build applications in the following categories:
 
 * [Real-Time Messaging](https://github.com/pushtechnology/tutorials/tree/master/messaging)
-* Data Store Apps
-* Web & Mobile Apps
+* Real-time Data Store with Kafka
+* Real-time Apps (Web, Mobile, IoT)
 ------------------
  All our examples include a README file describing the diferent features we will use from our SDK.
  
