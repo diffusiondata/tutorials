@@ -39,6 +39,6 @@ You can also leave the default values and connect to our sandbox service:
 
 # Execution
 
-Really easy, just open the index.html file and off you go!
+Really easy, just open the index.html file locally and off you go!
 
 
