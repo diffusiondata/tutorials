@@ -7,7 +7,7 @@ Users can chat in realtime across various meeting rooms.
 A simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
 
 # Version 1
-[diffusion-chat-app-v1](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v1) introduces de concept of Publish and Subscribe to topics (data structures).
+[diffusion-chat-app-v1](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v1) introduces de concept of Publish and Subscribe to [topics (data structures)](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html).
 
 # Version 2
 [diffusion-chat-app-v2](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v2) introduces de concept of Time Series.
