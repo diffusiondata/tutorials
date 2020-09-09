@@ -2,11 +2,11 @@
 
 # Real-Time Messaging
 
-Introduction to Diffusion Real-Time Messaging through a chat application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
+Introduction to Diffusion Real-Time Messaging through a messaging application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
 
 Users can chat in realtime across various meeting rooms.
 
-A simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
+Simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
 
 # Lesson 1: Topics
 [diffusion-chat-app-v1](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v1) introduces de concept of Publish and Subscribe to [topics (data structures)](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html).
