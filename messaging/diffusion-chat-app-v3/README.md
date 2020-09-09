@@ -11,17 +11,17 @@ A simple projects, illustrating production and consumption of messages to and fr
 # From our SDK
 
 * [session.security.authenticationScriptBuilder()](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/security.html#authenticationscriptbuilder)
-```
+```js
 session.security.authenticationScriptBuilder();
 ```
 * [addPrincipal()](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/systemauthenticationscriptbuilder.html#addprincipal) - [build()](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/systemauthenticationscriptbuilder.html#build)
-```
+```js
 authenticationScriptBuilder
 		.addPrincipal(name, password, ['CLIENT','TOPIC_CONTROL'])
 		.build();
 ```
 * [session.security.updateAuthenticationStore()](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/security.html#updateauthenticationstore)
-```
+```js
 session.security.updateAuthenticationStore(addUserScript);
 ```
 
