@@ -10,7 +10,7 @@ A simple projects, illustrating production and consumption of messages to and fr
 
 # From our SDK
 
-* [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) : [*host*](https://management.ad.diffusion.cloud/)
+* [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
 ```
 diffusion.connect({
 	host : host, // Use your Diffusion service or connect to our sandbox "diffusionchatapp.eu.diffusion.cloud"
