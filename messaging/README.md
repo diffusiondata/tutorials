@@ -9,7 +9,7 @@ Users can interact in realtime across various topic rooms.
 Simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
 
 # Lesson 1: Topics
-[diffusion-chat-app-v1](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v1) introduces de concept of Publish and Subscribe to [topics (data structures)](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html).
+[diffusion-chat-app-v1](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v1) introduces the concept of Publish and Subscribe to [topics (data structures)](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html).
 
 # Lesson 2: Time Series
 [diffusion-chat-app-v2](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v2) introduces de concept of [Time Series](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/data/topics/timeseries_topics.html).
