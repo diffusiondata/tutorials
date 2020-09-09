@@ -28,3 +28,5 @@ You can also leave the default values and connect to our sandbox service:
 * host: 'diffusionchatapp.eu.diffusion.cloud'
 * user: 'user'
 * password: 'password'
+
+<img src="https://github.com/pushtechnology/tutorials/blob/master/messaging/chat-screen.png" height="500" title="chat-screen">
