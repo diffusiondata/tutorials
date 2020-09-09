@@ -6,7 +6,7 @@ A simple projects, illustrating production and consumption of messages to and fr
 
 # Version 3
 
-**diffusion-chat-app-v3** introduces de concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html): [authentication, principals and roles](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/useraccess/atn_model.html).
+**diffusion-chat-app-v3** introduces de concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) > [authentication, principals and roles](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/useraccess/atn_model.html).
 
 # From our SDK
 
