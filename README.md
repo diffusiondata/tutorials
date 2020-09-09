@@ -2,7 +2,7 @@
 
 # Diffusion Tutorials and Examples
 
-This project contains example code that demonstrates the use of the [Diffusion](https://www.pushtechnology.com/product-overview) [SDKs](https://docs.pushtechnology.com/#sdks).
+This project contains example code that demonstrates the use of the [Diffusion](https://www.pushtechnology.com/product-overview) and [Diffusion SDKs](https://docs.pushtechnology.com/#sdks).
 
 Here, you will find complete code examples on a variety of programing languages (Javascript for now) to build applications in the following categories:
 
