@@ -11,26 +11,26 @@ A simple projects, illustrating production and consumption of messages to and fr
 # From our SDK
 
 * [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
-```
+```js
 diffusion.connect({
 	host : host, // Use your Diffusion service or connect to our sandbox "diffusionchatapp.eu.diffusion.cloud"
 	principal : "user",
 	credentials : "password"})
 ```
 * [session.topics.add](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/topiccontrol.html#add)
-```
+```js
 session.topics.add(_roomTopic, diffusion.topics.TopicType.JSON);
 ```
 * [session.addStream](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/session.html#addstream)
-```
+```js
 session.addStream(_roomTopic, diffusion.datatypes.json());
 ```
 * [session.select](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/session.html#select)
-```
+```js
 session.select(_roomTopic);
 ```
 * [session.topicUpdate.set](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/topicupdate.html#set)
-```
+```js
 session.topicUpdate.set(_roomTopic, diffusion.datatypes.json(),
 	{
 		text: msg,
