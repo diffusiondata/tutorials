@@ -4,7 +4,7 @@ This is sample chat application using [Diffusion](https://www.pushtechnology.com
 Users can chat in realtime across various meeting rooms.
 A simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
 
-# Version 1
+# Lesson 1
 
 **diffusion-chat-app-v1** introduces de concept of Publish and Subscribe to [topics (data structures)](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html).
 
