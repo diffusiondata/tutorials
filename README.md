@@ -1,3 +1,5 @@
+<img src="https://www.pushtechnology.com/wp-content/themes/pushtechnology/img/diffusion-padding-bottom.png" height="80" title="Logo">
+
 # Diffusion API Tutorials and Examples
 
 This project contains example code that demonstrates the use of the [Diffusion](https://www.pushtechnology.com/product-overview) [SDKs](https://docs.pushtechnology.com/#sdks).
@@ -11,7 +13,7 @@ Here, you will find complete code examples on a variety of programing languages 
  All our examples include a README file describing the diferent features we will use from our SDK.
  
  Please refer to the [online documentation](https://docs.pushtechnology.com/) for further details.
-
+ 
 ------------------
 [Diffusion Intelligent Data Mesh](https://www.pushtechnology.com)
 
