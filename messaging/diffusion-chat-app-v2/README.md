@@ -12,7 +12,7 @@ A simple projects, illustrating production and consumption of messages to and fr
 
 * [diffusion.topics.TopicSpecification](https://docs.pushtechnology.com/docs/6.5.1/js/classes/topicspecification.html) : [TopicType.TIME_SERIES](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#topictypeenum.time_series)
 
-```
+```js
 diffusion.topics.TopicSpecification(diffusion.topics.TopicType.TIME_SERIES, 
 	{
 		TIME_SERIES_EVENT_VALUE_TYPE : "json",
@@ -21,7 +21,7 @@ diffusion.topics.TopicSpecification(diffusion.topics.TopicType.TIME_SERIES,
 	});
 ```
 * [session.timeseries.append](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/timeseries.html#append)
-```
+```js
 session.timeseries.append(_roomTopic,
 	{
 		text: msg 
