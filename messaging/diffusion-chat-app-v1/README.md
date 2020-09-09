@@ -10,10 +10,10 @@ A simple projects, illustrating production and consumption of chat messages to a
 
 # From our SDK
 
-* [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect)
+* [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) : [*host*](https://management.ad.diffusion.cloud/)
 ```
 diffusion.connect({
-	host : "diffusionchatapp.eu.diffusion.cloud",
+	host : host, // Use your Diffusion service or connect to our sandbox "diffusionchatapp.eu.diffusion.cloud"
 	principal : "user",
 	credentials : "password"})
 ```
@@ -46,9 +46,9 @@ session.topicUpdate.set(_roomTopic, diffusion.datatypes.json(),
 
 # Setup
 
-Set lines 43 of `public/js/app.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
+Set lines 44 of `public/js/app.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
-* host: 'diffusionchatapp.eu.diffusion.cloud'
+* host: host ("diffusionchatapp.eu.diffusion.cloud" by default)
 * user: 'user'
 * password: 'password'
 

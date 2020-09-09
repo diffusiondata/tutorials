@@ -2,9 +2,10 @@ let _session = null;
 let _roomTopic = null;
 
 // get query params from url
+let host = getQueryVariable("host") || "diffusionchatapp.eu.diffusion.cloud";
 let name = getQueryVariable("name");
 let password = getQueryVariable("password");
-let room = getQueryVariable("room") || "No room selected";
+let room = getQueryVariable("room") || "Default room";
 
 // update room title on the chat.html page
 document.getElementById("room-title").innerText = room;
@@ -41,7 +42,7 @@ form.onsubmit = (evt) => {
 // Connect to your Diffusion service, or leave this values and connect to our sandbox
 // Sign up to Diffusion Cloud and get your service up a running in a minute.
 diffusion.connect({
-    host : "diffusionchatapp.eu.diffusion.cloud",
+    host : host,
     principal : name,
     credentials : password
 }).then(

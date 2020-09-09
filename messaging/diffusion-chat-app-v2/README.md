@@ -39,9 +39,9 @@ session.timeseries.append(_roomTopic,
 
 # Setup
 
-Set lines 43 of `public/js/app.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
+Set lines 44 of `public/js/app.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
-* host: 'diffusionchatapp.eu.diffusion.cloud'
+* host: host ("diffusionchatapp.eu.diffusion.cloud" by default)
 * user: 'user'
 * password: 'password'
 

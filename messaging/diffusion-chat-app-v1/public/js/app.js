@@ -2,8 +2,9 @@ let _session = null;
 let _roomTopic = null;
 
 // get query params from url
-let name = getQueryVariable("name") || "Anonymous";
-let room = getQueryVariable("room") || "No Room Selected";
+let host = getQueryVariable("host") || "diffusionchatapp.eu.diffusion.cloud";
+let name = getQueryVariable("name");
+let room = getQueryVariable("room") || "Default Room";
 
 // update room title on the chat.html page
 document.getElementById("room-title").innerText = room;
@@ -20,7 +21,7 @@ form.onsubmit = (evt) => {
 
     // Ignore empty messages
     if (msg === "") {
-	return false;
+	    return false;
     }
 
     // Send update to Diffusion
@@ -40,7 +41,7 @@ form.onsubmit = (evt) => {
 // Connect to your Diffusion service, or leave this values and connect to our sandbox
 // Sign up to Diffusion Cloud and get your service up a running in a minute.
 diffusion.connect({
-    host : "diffusionchatapp.eu.diffusion.cloud",
+    host : host, // Use your Diffusion service or connect to our sandbox "diffusionchatapp.eu.diffusion.cloud"
     principal : "user",
     credentials : "password"
 }).then(
@@ -59,7 +60,7 @@ diffusion.connect({
 	
 	// Set up a stream to receive updates from the chatroom topic.
 	session.addStream(_roomTopic, diffusion.datatypes.json())
-	    .on('value', displayMessage);
+	    .on("value", displayMessage);
 
 	// Subscribe to the chatroom topic.
 	session.select(_roomTopic);
@@ -74,7 +75,7 @@ diffusion.connect({
 	);
     },
     (err) => {
-	alert(err);
+	    alert(err);
     }
 );
 
