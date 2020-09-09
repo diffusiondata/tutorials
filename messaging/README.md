@@ -29,4 +29,6 @@ You can also leave the default values and connect to our sandbox service:
 * user: 'user'
 * password: 'password'
 
+# Chat UI
+
 <img src="https://github.com/pushtechnology/tutorials/blob/master/messaging/chat-screen.png" height="500" title="chat-screen">
