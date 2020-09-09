@@ -1,6 +1,6 @@
 <img src="https://www.pushtechnology.com/wp-content/themes/pushtechnology/img/diffusion-padding-bottom.png" height="80" title="Logo">
 
-# Diffusion API Tutorials and Examples
+# Diffusion Tutorials and Examples
 
 This project contains example code that demonstrates the use of the [Diffusion](https://www.pushtechnology.com/product-overview) [SDKs](https://docs.pushtechnology.com/#sdks).
 
