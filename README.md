@@ -6,7 +6,7 @@ This project contains example code that demonstrates the use of the [Diffusion](
 
 Here, you will find complete code examples on a variety of programing languages (Javascript for now) to build applications in the following categories:
 
-* Messaging Apps
+* [Messaging Apps](https://github.com/pushtechnology/tutorials/tree/master/messaging)
 * Data Store Apps
 * Web & Mobile Apps
 ------------------
