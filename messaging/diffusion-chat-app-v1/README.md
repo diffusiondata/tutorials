@@ -2,7 +2,7 @@
 
 This is sample chat application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
 Users can chat in realtime across various meeting rooms.
-A simple projects, illustrating production and consumption of chat messages to and from a Diffusion Cloud instance.
+A simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
 
 # Version 1
 
@@ -46,7 +46,7 @@ session.topicUpdate.set(_roomTopic, diffusion.datatypes.json(),
 
 # Setup
 
-Set lines 44 of `public/js/app.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
+Set lines 44-46 of `public/js/app.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
 * host: host ("diffusionchatapp.eu.diffusion.cloud" by default)
 * user: 'user'
