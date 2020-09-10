@@ -1,16 +1,19 @@
-# diffusion-chat-app-v2
+# diffusion-msg-app-L2
 
-This is sample chat application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
-Users can chat in realtime across various meeting rooms.
-A simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
+Introduction to Diffusion Real-Time Messaging through a simple application using Diffusion Cloud.
 
-# Version 2
+Users can interact in realtime across various topic rooms.
 
-**diffusion-chat-app-v2** introduces de concept of [Time Series](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/data/topics/timeseries_topics.html).
+Simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
 
-# From our SDK
+# Lesson 2: Time Series
 
-* [diffusion.topics.TopicSpecification](https://docs.pushtechnology.com/docs/6.5.1/js/classes/topicspecification.html) : [TopicType.TIME_SERIES](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#topictypeenum.time_series)
+[diffusion-msg-app-L2](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v2) introduces the concept of [Time Series](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/data/topics/timeseries_topics.html) topic to hold a sequence of events. Time series topics are useful for collaborative applications such as chat rooms. Multiple users can concurrently update a time series topic.
+
+# APIs used in this application
+
+## Step 1: Topic Types and Specifications
+### [diffusion.topics.TopicSpecification](https://docs.pushtechnology.com/docs/6.5.1/js/classes/topicspecification.html) : [TopicType.TIME_SERIES](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#topictypeenum.time_series)
 
 ```js
 diffusion.topics.TopicSpecification(diffusion.topics.TopicType.TIME_SERIES, 
@@ -20,7 +23,8 @@ diffusion.topics.TopicSpecification(diffusion.topics.TopicType.TIME_SERIES,
 		TIME_SERIES_SUBSCRIPTION_RANGE: "limit 100"
 	});
 ```
-* [session.timeseries.append](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/timeseries.html#append)
+## Step 2: Append/Update Time Serie
+### [session.timeseries.append](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/timeseries.html#append)
 ```js
 session.timeseries.append(_roomTopic,
 	{
@@ -31,15 +35,13 @@ session.timeseries.append(_roomTopic,
 	diffusion.datatypes.json());
 ```
 			   
-
-# Requirements
+# Pre-requisites
 
 *  Download our code examples or clone them to your local environment:
 ```
  git clone https://github.com/pushtechnology/tutorials/
 ```
-* A Diffusion service (Cloud or On-Premise), version 6.5.0 or greater.
-* Create a service [here](https://management.ad.diffusion.cloud/).
+* A Diffusion service (Cloud or On-Premise), version 6.5.0 or greater. Create a service [here](https://management.ad.diffusion.cloud/).
 * Follow our [Quick Start Guide](https://docs.pushtechnology.com/quickstart/#diffusion-cloud-quick-start) and get your service up in a minute!
 
 # Setup
