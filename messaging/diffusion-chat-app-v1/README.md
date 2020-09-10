@@ -8,7 +8,7 @@ A simple projects, illustrating production and consumption of messages to and fr
 
 **diffusion-chat-app-v1** introduces de concept of Publish and Subscribe to [topics (data structures)](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html).
 
-# From our SDK
+# List of API used in this application
 
 * [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
 ```js
