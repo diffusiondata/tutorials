@@ -6,22 +6,22 @@ Users can interact in realtime across various topic rooms.
 Simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
 
 # Lesson 3: Security
-[diffusion-msg-app-L3](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v3) introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) by requiring sessions to [authenticate](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/useraccess/atn_model.html) and use [role-based](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/roles_permissions.html) authorization to define the actions that a client can perform.
+[diffusion-msg-app-L3](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v3) introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) by requiring sessions to [authenticate](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/useraccess/atn_model.html) and use [role-based](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/role_based_security.html) authorization to define the actions that a client can perform.
 
 # APIs used in this application
-## Step1: 
+## Step 1: Using Auth script builder
 ### [session.security.authenticationScriptBuilder()](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/security.html#authenticationscriptbuilder)
 ```js
 session.security.authenticationScriptBuilder();
 ```
-## Step 2: 
+## Step 2: Create a new user (principal) with a user name, password and [ROLES](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/roles_permissions.html)
 ### [addPrincipal()](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/systemauthenticationscriptbuilder.html#addprincipal) - [build()](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/systemauthenticationscriptbuilder.html#build)
 ```js
 authenticationScriptBuilder
 		.addPrincipal(name, password, ['CLIENT','TOPIC_CONTROL'])
 		.build();
 ```
-## Step 3: 
+## Step 3: Update the Auth store
 ### [session.security.updateAuthenticationStore()](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/security.html#updateauthenticationstore)
 ```js
 session.security.updateAuthenticationStore(addUserScript);
