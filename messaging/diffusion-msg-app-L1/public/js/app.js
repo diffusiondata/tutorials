@@ -54,8 +54,8 @@ diffusion.connect({
 	// Create a Diffusion Topic called Chat and as many subtopics as rooms we have.
 	_roomTopic = "Chat/" + room;
 
-	// Use a TimeSeries topic with a JSON data type.
-	// This allows us to maintain a history of the chat, along with the ability to add metadata to the message (timestamp, name)
+	// Create a topic with a JSON data type,
+	// with the ability to add metadata to the message (timestamp, name)
 	session.topics.add(_roomTopic, diffusion.topics.TopicType.JSON);
 	
 	// Set up a stream to receive updates from the chatroom topic.
