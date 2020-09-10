@@ -11,24 +11,29 @@ A simple projects, illustrating production and consumption of messages to and fr
 # From our SDK
 
 * [session.security.authenticationScriptBuilder()](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/security.html#authenticationscriptbuilder)
-```
+```js
 session.security.authenticationScriptBuilder();
 ```
 * [addPrincipal()](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/systemauthenticationscriptbuilder.html#addprincipal) - [build()](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/systemauthenticationscriptbuilder.html#build)
-```
+```js
 authenticationScriptBuilder
 		.addPrincipal(name, password, ['CLIENT','TOPIC_CONTROL'])
 		.build();
 ```
 * [session.security.updateAuthenticationStore()](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/security.html#updateauthenticationstore)
-```
+```js
 session.security.updateAuthenticationStore(addUserScript);
 ```
 
 # Requirements
 
+*  Download our code examples or clone them to your local environment:
+```
+ git clone https://github.com/pushtechnology/tutorials/
+```
 * A Diffusion service (Cloud or On-Premise), version 6.5.0 or greater.
 * Create a service [here](https://management.ad.diffusion.cloud/).
+* Follow our [Quick Start Guide](https://docs.pushtechnology.com/quickstart/#diffusion-cloud-quick-start) and get your service up in a minute!
 
 # Setup
 
@@ -38,6 +43,6 @@ You can also leave the default values and connect to our sandbox service:
 
 # Execution
 
-Really easy, just open the index.html file and off you go!
+Really easy, just open the index.html file locally and off you go!
 
 
