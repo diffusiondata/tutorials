@@ -1,6 +1,6 @@
 # diffusion-msg-app-L1
 
-Introduction to Diffusion Real-Time Messaging through a simple application using Diffusion Cloud.
+Introduction to Diffusion Real-Time Messaging through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
 
 Users can interact in realtime across various topic rooms.
 
