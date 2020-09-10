@@ -2,15 +2,15 @@
 
 # Diffusion Tutorials and Examples
 
-This project contains example code that demonstrates the use of the [Diffusion](https://www.pushtechnology.com/product-overview) and [Diffusion SDKs](https://docs.pushtechnology.com/#sdks).
+This project contains example code that demonstrates the use of [Diffusion](https://www.pushtechnology.com/product-overview) and the [Diffusion SDKs](https://docs.pushtechnology.com/#sdks).
 
-Here, you will find complete code examples on a variety of programing languages (Javascript for now) to build applications in the following categories:
+Here you will find complete code examples on a variety of programming languages (starting with Javascript for now) to build applications in the following categories:
 
-* [Real-Time Messaging](https://github.com/pushtechnology/tutorials/tree/master/messaging)
+* [Real-Time Instant Messaging](https://github.com/pushtechnology/tutorials/tree/master/messaging) app demonstrating how to make a text chat app using publish-subscribe
 * Real-time Data Store with Kafka
 * Real-time Apps (Web, Mobile, IoT)
 ------------------
- All our examples include a README file describing the diferent features we will use from our SDK.
+ All our examples include a README file describing the different features we will use from our SDK.
  
  Simply download our code examples or clone them to your local environment:
 ```

@@ -1,16 +1,16 @@
 # diffusion-chat-app-v1
 
-This is sample chat application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
-Users can chat in realtime across various meeting rooms.
-A simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
+This is a sample chat application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
+Users can chat in real time across various meeting rooms.
+A simple project, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
 
 # Lesson 1
 
-**diffusion-chat-app-v1** introduces de concept of Publish and Subscribe to [topics (data structures)](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html).
+**diffusion-chat-app-v1** introduces the concept of Publish and Subscribe to [topics (data structures)](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html).
 
 # APIs used in this application
 
-* [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
+* [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://diffusion.cloud/)
 ```js
 diffusion.connect({
 	host : host, // Use your Diffusion service or connect to our sandbox "diffusionchatapp.eu.diffusion.cloud"
@@ -45,9 +45,8 @@ session.topicUpdate.set(_roomTopic, diffusion.datatypes.json(),
 ```
  git clone https://github.com/pushtechnology/tutorials/
 ```
-* A Diffusion service (Cloud or On-Premise), version 6.5.0 or greater.
-* Create a service [here](https://management.ad.diffusion.cloud/).
-* Follow our [Quick Start Guide](https://docs.pushtechnology.com/quickstart/#diffusion-cloud-quick-start) and get your service up in a minute!
+* A Diffusion Cloud service, version 6.5.0 or greater.
+* Create a service [here](https://diffusion.cloud/).
 
 # Setup
 
@@ -59,4 +58,4 @@ You can also leave the default values and connect to our sandbox service:
 
 # Execution
 
-Really easy, just open the index.html file locally and off you go!
+Really easy - just open the index.html file locally and off you go!

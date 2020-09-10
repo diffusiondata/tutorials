@@ -1,12 +1,16 @@
 # diffusion-chat-app-v2
 
-This is sample chat application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
-Users can chat in realtime across various meeting rooms.
-A simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
+This is a sample chat application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
+
+Users can chat in real time across various meeting rooms.
+
+A simple project illustrating production and consumption of messages to and from a Diffusion Cloud instance.
+
+This version preserves the chat history and displays it when you rejoin a room. History is stored using the time series topic type, which contains a timestamped series of events.
 
 # Version 2
 
-**diffusion-chat-app-v2** introduces de concept of [Time Series](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/data/topics/timeseries_topics.html).
+**diffusion-chat-app-v2** introduces the concept of [Time Series](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/data/topics/timeseries_topics.html) topics.
 
 # From our SDK
 
@@ -38,9 +42,8 @@ session.timeseries.append(_roomTopic,
 ```
  git clone https://github.com/pushtechnology/tutorials/
 ```
-* A Diffusion service (Cloud or On-Premise), version 6.5.0 or greater.
-* Create a service [here](https://management.ad.diffusion.cloud/).
-* Follow our [Quick Start Guide](https://docs.pushtechnology.com/quickstart/#diffusion-cloud-quick-start) and get your service up in a minute!
+* A Diffusion Cloud service, version 6.5.0 or greater.
+* Create a service [here](https://diffusion.cloud/).
 
 # Setup
 
@@ -52,5 +55,5 @@ You can also leave the default values and connect to our sandbox service:
 
 # Execution
 
-Really easy, just open the index.html file locally and off you go!
+Really easy - just open the index.html file locally and off you go!
 
