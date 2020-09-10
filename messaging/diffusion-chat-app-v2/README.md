@@ -1,6 +1,6 @@
 # diffusion-msg-app-L2
 
-Introduction to Diffusion Real-Time Messaging through a simple application using Diffusion Cloud.
+Introduction to Diffusion Real-Time Messaging through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
 
 Users can interact in realtime across various topic rooms.
 
@@ -23,7 +23,7 @@ diffusion.topics.TopicSpecification(diffusion.topics.TopicType.TIME_SERIES,
 		TIME_SERIES_SUBSCRIPTION_RANGE: "limit 100"
 	});
 ```
-## Step 2: Append/Update Time Serie
+## Step 2: Append/Update Time Series
 ### [session.timeseries.append](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/timeseries.html#append)
 ```js
 session.timeseries.append(_roomTopic,
