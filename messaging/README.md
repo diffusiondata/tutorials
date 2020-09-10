@@ -18,7 +18,7 @@ Simple projects, illustrating production and consumption of messages to and from
 [diffusion-chat-app-v3](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v3) introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) > [authentication, principals and roles](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/useraccess/atn_model.html).
 
 
-# Requirements
+# Pre-requisites
 
 *  Download our code examples or clone them to your local environment:
 ```
