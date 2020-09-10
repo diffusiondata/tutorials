@@ -9,7 +9,9 @@ Here, you will find complete code examples on a variety of programing languages 
 * [Real-Time Messaging](https://github.com/pushtechnology/tutorials/tree/master/messaging)
 * Real-time Data Store with Kafka
 * Real-time Apps (Web, Mobile, IoT)
+
 ------------------
+# Setup
  All our examples include a README file describing the diferent features we will use from our SDK.
  
  Simply download our code examples or clone them to your local environment:
@@ -20,6 +22,7 @@ Here, you will find complete code examples on a variety of programing languages 
  Please refer to the [online documentation](https://docs.pushtechnology.com/) for further details.
  
 ------------------
+# Learn More
 [Diffusion Intelligent Data Mesh](https://www.pushtechnology.com)
 
 Modernize your Real-Time Applications with our easily adoptable,
