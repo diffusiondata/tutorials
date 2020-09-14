@@ -6,7 +6,7 @@ Users can interact in realtime across various topic rooms.
 Simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
 
 # Lesson 3: Security
-[diffusion-msg-app-L3](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-chat-app-v3) introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) by requiring sessions to [authenticate](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/useraccess/atn_model.html) and use [role-based](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/role_based_security.html) authorization to define the actions that a client can perform.
+**diffusion-msg-app-L3** introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) by requiring sessions to [authenticate](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/useraccess/atn_model.html) and use [role-based](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/role_based_security.html) authorization to define the actions that a client can perform.
 
 # APIs used in this application
 ## Step 1: Using Auth script builder
