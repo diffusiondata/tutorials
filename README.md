@@ -21,6 +21,4 @@ Here, you will find complete code examples on a variety of programing languages 
  Please refer to the [online documentation](https://docs.pushtechnology.com/) for further details.
 
 # Learn More
-## [Diffusion Intelligent Data Mesh](https://www.pushtechnology.com)
-Modernize your Real-Time Applications with our easily adoptable,
-secure [APIs](https://docs.pushtechnology.com/#sdks) powered by pub/sub model, key-value store and session broker.
+[![Push Homepage](https://github.com/pushtechnology/tutorials/homepage.png)](https://www.pushtechnology.com)
