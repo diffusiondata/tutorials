@@ -1,4 +1,4 @@
-<img src="https://www.pushtechnology.com/wp-content/themes/pushtechnology/img/diffusion-padding-bottom.png" height="80" title="Logo">
+[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/video.png)](https://youtu.be/DVSq4So9uTU)
 
 # Real-Time Messaging
 
@@ -33,6 +33,3 @@ You can also leave the default values and connect to our sandbox service:
 * host: 'diffusionchatapp.eu.diffusion.cloud'
 * user: 'user'
 * password: 'password'
-
-# Video Tutorial
-[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/video.png)](https://youtu.be/DVSq4So9uTU)
