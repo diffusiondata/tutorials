@@ -21,4 +21,4 @@ Here, you will find complete code examples on a variety of programing languages 
  Please refer to the [online documentation](https://docs.pushtechnology.com/) for further details.
 
 # Learn More
-[![Push Homepage](https://github.com/pushtechnology/tutorials/homepage.png)](https://www.pushtechnology.com)
+[![Push Homepage](https://github.com/pushtechnology/tutorials/blob/master/homepage.png)](https://www.pushtechnology.com)
