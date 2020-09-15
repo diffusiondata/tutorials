@@ -34,6 +34,5 @@ You can also leave the default values and connect to our sandbox service:
 * user: 'user'
 * password: 'password'
 
-# Messaging App UI
-
-<img src="https://github.com/pushtechnology/tutorials/blob/master/messaging/chat-screen.png" height="500" title="chat-screen">
+# Video Tutorial
+[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/video.png)](https://youtu.be/DVSq4So9uTU)
