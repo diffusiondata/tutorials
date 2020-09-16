@@ -1,4 +1,4 @@
-[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/video.png)](https://youtu.be/PdgNi7MeDvc)
+[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/video.png)](https://youtu.be/K8rk3T2Mbbs)
 # Real-Time Messaging
 
 Introduction to Diffusion Real-Time Messaging through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
@@ -17,7 +17,7 @@ A set of simple projects, illustrating production and consumption of messages to
 [diffusion-msg-app-L3](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-msg-app-L3) introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) by requiring sessions to [authenticate](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/useraccess/atn_model.html) and use [role-based](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/roles_permissions.html) authorization to define the actions that a client can perform.
 
 # The code in action
-[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/code-example.png)](https://youtu.be/PdgNi7MeDvc?t=317)
+[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/code-example.png)](https://youtu.be/K8rk3T2Mbbs?t=317)
 
 # Pre-requisites
 
