@@ -1,4 +1,4 @@
-[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/video.png)](https://youtu.be/K8rk3T2Mbbs)
+[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/video.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
 # Real-Time Messaging
 
 Introduction to Diffusion Real-Time Messaging through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
