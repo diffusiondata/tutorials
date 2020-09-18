@@ -17,7 +17,7 @@ A set of simple projects, illustrating production and consumption of messages to
 [diffusion-msg-app-L3](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-msg-app-L3) introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) by requiring sessions to [authenticate](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/useraccess/atn_model.html) and use [role-based](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/roles_permissions.html) authorization to define the actions that a client can perform.
 
 # The code in action
-[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/code-example.png)](https://youtu.be/K8rk3T2Mbbs?t=336)
+[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/code-example.png)](https://youtu.be/tTx8q4oPx7E?t=336)
 
 # Pre-requisites
 
