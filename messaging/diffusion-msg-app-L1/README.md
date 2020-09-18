@@ -70,4 +70,4 @@ You can also leave the default values and connect to our sandbox service:
 Really easy, just open the index.html file locally and off you go!
 
 # The code in action
-[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/code-example.png)](https://youtu.be/K8rk3T2Mbbs?t=336)
+[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/code-example.png)](https://youtu.be/tTx8q4oPx7E?t=336)
