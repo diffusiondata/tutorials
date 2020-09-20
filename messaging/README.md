@@ -3,7 +3,7 @@
 
 Introduction to Diffusion Real-Time Messaging through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud.
 
-These code examples enable users to interact in real-time across various rooms or topics.
+These JavaScript code examples enable users to interact in real-time across various rooms or topics. You can also use other programming languages from our [SDKs](https://docs.pushtechnology.com/#sdks), including iOS, Android, C, .NET, and more. 
 
 A set of simple projects, illustrating production and consumption of messages to and from a Diffusion Cloud instance.
 
@@ -30,6 +30,10 @@ A set of simple projects, illustrating production and consumption of messages to
 
 # Setup
 
+Make sure to add Diffusion library. For JavaScript:
+```
+<script src='https://download.pushtechnology.com/clients/6.5.1/js/diffusion-6.5.1.js'></script>
+```
 Update `public/js/app.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
 ```
