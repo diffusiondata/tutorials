@@ -30,7 +30,7 @@ A set of simple projects, illustrating production and consumption of messages to
 
 # Setup
 
-Make sure to add Diffusion library. For JavaScript:
+Make sure to add Diffusion library to your code. For JavaScript, we have added the following line in our `public/chat.html`:
 ```
 <script src='https://download.pushtechnology.com/clients/6.5.1/js/diffusion-6.5.1.js'></script>
 ```
