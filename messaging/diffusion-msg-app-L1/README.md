@@ -59,6 +59,10 @@ session.topicUpdate.set(_roomTopic, diffusion.datatypes.json(),
 
 # Setup
 
+Make sure to add Diffusion library to your code. For JavaScript, we have added the following line in our `public/chat.html`:
+```
+<script src='https://download.pushtechnology.com/clients/6.5.1/js/diffusion-6.5.1.js'></script>
+```
 Set lines 44-46 of `public/js/app.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
 * host: host ("diffusionchatapp.eu.diffusion.cloud" by default)
