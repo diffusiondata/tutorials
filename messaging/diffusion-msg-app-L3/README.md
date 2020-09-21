@@ -36,6 +36,11 @@ session.security.updateAuthenticationStore(addUserScript);
 * Follow our [Quick Start Guide](https://docs.pushtechnology.com/quickstart/#diffusion-cloud-quick-start) and get your service up in a minute!
 
 # Setup
+
+Make sure to add Diffusion library to your code. For JavaScript, we have added the following line in our `public/chat.html`:
+```
+<script src='https://download.pushtechnology.com/clients/6.5.1/js/diffusion-6.5.1.js'></script>
+```
 Set line 28-30 of `public/js/signup.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
 * host: 'diffusionchatapp.eu.diffusion.cloud'
