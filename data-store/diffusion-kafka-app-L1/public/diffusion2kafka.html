@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Diffusion Kafka</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <style>.well {margin-top: 35px;}</style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 well" style="background-image: url(./images/cloud-overview-header.jpg)">
+          <a class="btn btn-info " style="background-color:#3d3d3d;" href="../index.html">
+            <i class="fa fa-cog"></i>
+            Settings</a>
+          <div class="text-center" href="https://www.pushtechnology.com">
+            <img src="./images/diffusion-logo.png" height="80">
+          </div>
+          <h1 id="room-title" class="text-center" style="color:White;"></h1>
+          <form id="parametersForm">
+            <div class="form-group">
+              <i class="" id="icon-type"></i>
+              <p class="help-block typing"></p>
+              <div class="form-group">
+                <label for="name" style="color:White;">Number of updates :</label>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-repeat"></i>
+                  </span>
+                  <input class="form-control" id="loop" name="loop" placeholder="3000" type="text">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name" style="color:White;">Frequency (ms) :</label>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-time"></i>
+                  </span>
+                  <input class="form-control" id="frequency" name="frequency" placeholder="10" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+	            <input class="btn btn-primary btn-block" style="background-color:#3d3d3d;" type="submit"/>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src='https://download.pushtechnology.com/clients/6.5.1/js/diffusion-6.5.1.js'></script>
+    <script src="js/QueryParams.js"></script>
+    <script src="js/producerApp.js"></script>
+  </body>
+</html>
