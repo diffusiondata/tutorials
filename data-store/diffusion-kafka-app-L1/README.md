@@ -24,6 +24,14 @@ diffusion.connect({
 ```js
 session.topics.add(_fxTopic, diffusion.topics.TopicType.JSON);
 ```
+### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
+#### Diffusion Cloud > Manage Service
+<a href="url"><img src="https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/cloud%20service.png" align="left" height="150" ></a>
+<br/><br/><br/><br/><br/><br/>
+####  Console > Topics
+We are seeting up _fxTopic with the topic path: "diffusion.fx"
+![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/topics.png)
+
 ## **Step 3: Update a Topic**
 ### [session.topicUpdate.set](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/topicupdate.html#set)
 ```js
