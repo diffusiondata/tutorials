@@ -52,7 +52,7 @@ session.topicUpdate.createUpdateStream(_fxTopic, diffusion.datatypes.json()).set
 #### Diffusion Cloud > Manage Service
 <a href="url"><img src="https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/cloud%20service.png" align="left" height="150" ></a>
 <br/><br/><br/><br/><br/><br/>
-#### Adapters > Kafka Adapter
+#### Adapters > Kafka Adapter > Broadcast to Kafka
 [![Kafka Adapter Video](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/adapter.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
 ```js
 Adpapters > Kafka Adapter > Broadcast_to_Kafka Config:
