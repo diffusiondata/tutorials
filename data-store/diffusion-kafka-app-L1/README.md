@@ -50,7 +50,8 @@ session.topicUpdate.createUpdateStream(_fxTopic, diffusion.datatypes.json()).set
 ## **Step 4: Kafka Adapter Configuration**
 ### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter](https://management.ad.diffusion.cloud/#!/login)
 #### Diffusion Cloud > Manage Service
-![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/cloud%20service.png | width=100)
+<a href="url"><img src="https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/cloud%20service.png" align="left" height="150" ></a>
+<br/><br/><br/><br/><br/><br/>
 #### Adapters > Kafka Adapter
 [![Kafka Adapter Video](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/adapter.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
 ```js
