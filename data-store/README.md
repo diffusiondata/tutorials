@@ -1,20 +1,20 @@
 [![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/video.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
 # Real-Time Data Store
 
-Introduction to Diffusion Real-Time Data Store through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud and Kafka.
+Introduction to Diffusion Real-Time Data Store through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud and Apache Kafka.
 
-A set of simple projects, illustrating production and consumption of foreign exchange (fx) data to and from Kafka clusters and Diffusion Cloud instance via the use of our Kafka Adapter.
+A set of simple projects, illustrating production and consumption of foreign exchange (fx) data streams to and from Kafka clusters and Diffusion Cloud instance via the use of our [Kafka Adapter](https://www.pushtechnology.com/wp-content/uploads/2020/08/Diffusion-Cloud-Kafka-adapter.pdf).
 
-These JavaScript code examples enable will help you publish data on real-time from a front end app to a Kafka cluster, consume from it and transform data on-the-fly via our powerful Topic Views feature. You can also use other programming languages from our [SDKs](https://docs.pushtechnology.com/#sdks), including iOS, Android, C, .NET, and more. 
+These JavaScript code examples will help you publish fx data on real-time from a front end app to a Kafka cluster, consume from it and transform data on-the-fly via our powerful [Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) feature. You can also use other programming languages from our [SDKs](https://docs.pushtechnology.com/#sdks), including iOS, Android, C, .NET, and more. 
 
 # Lesson 1: Publish Topics to Kafka cluster
-[diffusion-kafka-app-L1](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-msg-app-L1) introduces the concept of Publish and Subscribe to ['Topics' (data structures)](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html). In Diffusion, data is stored and distributed through Topics.
+[diffusion-kafka-app-L1](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L1) introduces the concept of our [Kafka Adapter](https://www.pushtechnology.com/wp-content/uploads/2020/08/Diffusion-Cloud-Kafka-adapter.pdf) and its configuration, as well as how to Publish fx data to ['Topics' (data structures)](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html). In Diffusion, data is stored and distributed through Topics (similar to Kafka).
 
 # Lesson 2: Ingest Kafka Topics (firehose) and Create Topic Views
-[diffusion-kafka-app-L2](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-msg-app-L2) introduces the concept of [Time Series](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/data/topics/timeseries_topics.html) topic to hold a sequence of events. Time series topics are useful for collaborative applications such as chat rooms. Multiple users can concurrently update a time series topic.
+[diffusion-kafka-app-L2](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L2) introduces the concept of [Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html), a dynamic mechanism to map part of a server's [Topic Tree](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_tree.html) (data structure) to another. This enables real-time data transformation before sending it to sunscribed clients as well as to create dynamic data models based on on-the-fly data (eg: Kafka firehose data).
 
 # Lesson 3: Subscribe to Kafka Topic Views (Consume what you need, not all the Kafka stream)
-[diffusion-kafka-app-L3](https://github.com/pushtechnology/tutorials/tree/master/messaging/diffusion-msg-app-L3) introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) by requiring sessions to [authenticate](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/useraccess/atn_model.html) and use [role-based](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/roles_permissions.html) authorization to define the actions that a client can perform.
+[diffusion-kafka-app-L3](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L2) introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) and topic [path permissions](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/security/permissions_reference.html) for fine-grained security management of your data structure.
 
 # The code in action
 [![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/code-example.png)](https://youtu.be/tTx8q4oPx7E?t=336)
@@ -34,10 +34,10 @@ Make sure to add Diffusion library to your code. For JavaScript, we have added t
 ```
 <script src='https://download.pushtechnology.com/clients/6.5.1/js/diffusion-6.5.1.js'></script>
 ```
-Update `public/js/app.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
+Update `public/js/producerApp.js` and `public/js/subscriberApp.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
 ```
-* host: 'diffusionchatapp.eu.diffusion.cloud'
+* host: 'kafkagateway.us.diffusion.cloud'
 * user: 'user'
 * password: 'password'
 ```
