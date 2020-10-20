@@ -47,6 +47,21 @@ session.topicUpdate.createUpdateStream(_fxTopic, diffusion.datatypes.json()).set
 		offer : offer.toFixed(2)
 	});
 ```
+## **Step 4: Kafka Adapter Configuration**
+### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter](https://management.ad.diffusion.cloud/#!/login)
+#### Diffusion Cloud > Manage Service
+[![Kafka Adapter Video](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/cloud%20service.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
+#### Adapters > Kafka Adapter
+[![Kafka Adapter Video](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/adapter.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
+```js
+session.topicUpdate.set(_fxTopic, diffusion.datatypes.json(),
+	{
+		pairName : pairName,
+		timestamp : new Date().getTime(),
+		bid : bid.toFixed(2),
+		offer : offer.toFixed(2)
+	});
+```
 			   
 # Pre-requisites
 
