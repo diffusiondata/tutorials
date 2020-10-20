@@ -11,27 +11,41 @@ These JavaScript code examples will help you publish fx data on real-time from a
 
 # APIs used in this application
 
-## Step 1: Topic Types and Specifications
-### [diffusion.topics.TopicSpecification](https://docs.pushtechnology.com/docs/6.5.1/js/classes/topicspecification.html) : [TopicType.TIME_SERIES](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#topictypeenum.time_series)
-
+## **Step 1: Connect to Diffusion**
+### [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
 ```js
-diffusion.topics.TopicSpecification(diffusion.topics.TopicType.TIME_SERIES, 
+diffusion.connect({
+	host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway.eu.diffusion.cloud"
+	principal : "user",
+	credentials : "password"})
+```
+## **Step 2: Create a Topic**
+### [session.topics.add](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/topiccontrol.html#add)
+```js
+session.topics.add(_fxTopic, diffusion.topics.TopicType.JSON);
+```
+## **Step 3: Update a Topic**
+### [session.topicUpdate.set](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/topicupdate.html#set)
+```js
+session.topicUpdate.set(_fxTopic, diffusion.datatypes.json(),
 	{
-		TIME_SERIES_EVENT_VALUE_TYPE : "json",
-		TIME_SERIES_RETAINED_RANGE: "limit 100",
-		TIME_SERIES_SUBSCRIPTION_RANGE: "limit 100"
+		pairName : pairName,
+		timestamp : new Date().getTime(),
+		bid : bid.toFixed(2),
+		offer : offer.toFixed(2)
 	});
 ```
-## Step 2: Append/Update Time Series
-### [session.timeseries.append](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/timeseries.html#append)
+## **Step 3 Alternative: Update a Topic more efficiently**
+### [session.topicUpdate.createUpdateStream](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/topicupdate.html#createupdatestream)
+Update streams send a sequence of updates for a specific topic. They can result in more efficient use of the network as only the differences between the current value and the updated value are transmitted. 
 ```js
-session.timeseries.append(_roomTopic,
+session.topicUpdate.createUpdateStream(_fxTopic, diffusion.datatypes.json()).set(
 	{
-		text: msg 
-		name: name,
-		timestamp: new Date().toLocaleTimeString()
-	},
-	diffusion.datatypes.json());
+		pairName : pairName,
+		timestamp : new Date().getTime(),
+		bid : bid.toFixed(2),
+		offer : offer.toFixed(2)
+	});
 ```
 			   
 # Pre-requisites
@@ -49,7 +63,7 @@ Make sure to add Diffusion library to your code. For JavaScript, we have added t
 ```
 <script src='https://download.pushtechnology.com/clients/6.5.1/js/diffusion-6.5.1.js'></script>
 ```
-Set lines 44-46 of `public/js/producerApp.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
+Set lines 32-34 of `public/js/producerApp.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
 * host: host ("kafkagateway.us.diffusion.cloud" by default)
 * user: 'user'
