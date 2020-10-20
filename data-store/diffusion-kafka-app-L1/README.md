@@ -55,13 +55,13 @@ session.topicUpdate.createUpdateStream(_fxTopic, diffusion.datatypes.json()).set
 #### Adapters > Kafka Adapter
 [![Kafka Adapter Video](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/adapter.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
 ```js
-session.topicUpdate.set(_fxTopic, diffusion.datatypes.json(),
-	{
-		pairName : pairName,
-		timestamp : new Date().getTime(),
-		bid : bid.toFixed(2),
-		offer : offer.toFixed(2)
-	});
+Adpapters > Kafka Adapter > Broadcast to Kafka Config:
+
+	Broker : connect to you Kafka cluster (eg: kafka-plain.preprod-demo.pushtechnology.com:9094)
+	Diffusion service credentials : admin, password,
+	Diffusion Topic: the source of data to broadcast to Kafka cluster (eg: diffusion.fx)
+	Kafka Topic : the destination topic in your Kafka cluster (eg: kafka.fx)
+
 ```
 			   
 # Pre-requisites
