@@ -39,6 +39,7 @@ We are going to map `kafka.firehose.fx` stream (we set up on previous step) to a
 
 ## Step 4: Check the Topic View is multiplexing the Kafka firehose
 As new values are coming in from the Kafka firehose, Diffusion is multiplexing and publishing the currency pairs on real-time.
+**Note:** The topic path will dynamically change as new currency pair values come in.
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20path.png)
