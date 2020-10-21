@@ -102,10 +102,12 @@ function displayMessage(topic, specification, newValue, oldValue) {
         // Scroll to bottom of container, to show latest message.
         container.scrollTop = container.scrollHeight - container.clientHeight;
 
+	// passing x,y points to JSCharting to graph fx
         chart.series(0).points.add({  y:parseFloat(msg.value.bid),  x:msg.value.timestamp },{shift: useShift});
     }
 }
 
+// function to shift points in fx graph
 function shiftPoints_btnClick(shiftVal) {
 	useShift=shiftVal;
 }
