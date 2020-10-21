@@ -27,7 +27,6 @@ session.topics.add(_fxTopic, diffusion.topics.TopicType.JSON);
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
 We are seeting up `_fxTopic` with the topic path: `diffusion.fx`
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/images/topics.png)
-
 ## **Step 3: Update a Topic**
 ### [session.topicUpdate.set](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/topicupdate.html#set)
 ```js

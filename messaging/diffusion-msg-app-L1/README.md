@@ -27,6 +27,10 @@ diffusion.connect({
 ```js
 session.topics.add(_roomTopic, diffusion.topics.TopicType.JSON);
 ```
+### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
+We are seeting up `_roomTopic` with the topic path: `Chat/Default Room`
+![](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/images/topics.png)
+
 ## **Step 3: Create a Topic Listener**
 ### [session.addStream](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/session.html#addstream)
 ```js
@@ -47,6 +51,8 @@ session.topicUpdate.set(_roomTopic, diffusion.datatypes.json(),
 		timestamp: new Date().toLocaleTimeString()
 	});
 ```
+# The code in action
+[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/images/code-example.png)](https://youtu.be/tTx8q4oPx7E?t=336)
 
 # Pre-requisites
 
@@ -72,6 +78,3 @@ You can also leave the default values and connect to our sandbox service:
 # Execution
 
 Really easy, just open the index.html file locally and off you go!
-
-# The code in action
-[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/code-example.png)](https://youtu.be/tTx8q4oPx7E?t=336)
