@@ -37,18 +37,12 @@ We are going to map `kafka.firehose.fx` stream (we set up on previous step) to a
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20views.png)
 
-## Step 2: Append/Update Time Series
-### [session.timeseries.append](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/timeseries.html#append)
-```js
-session.timeseries.append(_roomTopic,
-	{
-		text: msg 
-		name: name,
-		timestamp: new Date().toLocaleTimeString()
-	},
-	diffusion.datatypes.json());
-```
-			   
+## Step 4: Check the Topic View is multiplexing the Kafka firehose
+As new values are coming in from the Kafka firehose, Diffusion is multiplexing and publishing the currency pairs on real-time.
+### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
+
+![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20path.png)
+
 # Pre-requisites
 
 *  Download our code examples or clone them to your local environment:
@@ -60,13 +54,13 @@ session.timeseries.append(_roomTopic,
 
 # Setup
 
-Make sure to add Diffusion library to your code. For JavaScript, we have added the following line in our `public/diffusion2kafka.html`:
+Make sure to add Diffusion library to your code. For JavaScript, we have added the following line in our `public/diffusion2kafka.html` and `public/diffusion2kafka.html`:
 ```
 <script src='https://download.pushtechnology.com/clients/6.5.1/js/diffusion-6.5.1.js'></script>
 ```
-Set lines 44-46 of `public/js/app.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
+Set lines 32-34 of `public/js/producerApp.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
-* host: host ("diffusionchatapp.eu.diffusion.cloud" by default)
+* host: host ("kafkagateway.us.diffusion.cloud" by default)
 * user: 'user'
 * password: 'password'
 
