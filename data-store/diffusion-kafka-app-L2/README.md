@@ -28,6 +28,15 @@ We can see the `kafka.firehose.fx` stream from Kafka cluster (we set up on previ
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/kafka%20firehose.png)
 
+## Step 3: Create a Topic View using [Source value directives](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html)
+Source value directives use the keyword [`scalar()`](https://www.pushtechnology.com/blog/tutorial/using-topic-views-5.naming-reference-topic-with-topic-content/) and are parameterized by a single JSON pointer that extracts a scalar value from the source value.
+### Go to: [Diffusion Cloud > Manage Service > Console > Topics > Topic Views](https://management.ad.diffusion.cloud/#!/login)
+We are going to map `kafka.firehose.fx` stream (we set up on previous step) to a new Diffusion Topic View with path: `kafka/fx/<scalar(/value/pairName)>` where `/value/pairName` is the Kafka payload currency pairName (from previous step).
+
+***This Topic View will act as a real-time multiplexer sending only the currency pair the Kafka stream consumer is subscribed to, and not the whole stream.***
+
+![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20views.png)
+
 ## Step 2: Append/Update Time Series
 ### [session.timeseries.append](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/timeseries.html#append)
 ```js
