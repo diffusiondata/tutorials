@@ -27,6 +27,10 @@ diffusion.connect({
 ```js
 session.topics.add(_roomTopic, diffusion.topics.TopicType.JSON);
 ```
+### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
+We are seeting up `_roomTopic` with the topic path: `Chat/Default Room`
+![](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/images/topics.png)
+
 ## **Step 3: Create a Topic Listener**
 ### [session.addStream](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/session.html#addstream)
 ```js
