@@ -25,13 +25,7 @@ diffusion.connect({
 session.topics.add(_fxTopic, diffusion.topics.TopicType.JSON);
 ```
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
-#### Diffusion Cloud > Manage Service
-<a href="url"><img src="https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/images/cloud%20service.png" align="left" height="150" ></a>
-<br/><br/><br/><br/><br/><br/>
-####  Console > Topics
-<a href="url"><img src="https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/images/console%20access.png" align="left" height="250" ></a>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-####  We are seeting up _fxTopic with the topic path: "diffusion.fx"
+We are seeting up `_fxTopic` with the topic path: `diffusion.fx`
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/images/topics.png)
 
 ## **Step 3: Update a Topic**
@@ -59,10 +53,6 @@ session.topicUpdate.createUpdateStream(_fxTopic, diffusion.datatypes.json()).set
 ```
 ## **Step 4: Kafka Adapter Configuration**
 ### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter](https://management.ad.diffusion.cloud/#!/login)
-#### Diffusion Cloud > Manage Service
-<a href="url"><img src="https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/images/cloud%20service.png" align="left" height="150" ></a>
-<br/><br/><br/><br/><br/><br/>
-#### Adapters > Kafka Adapter > Broadcast to Kafka
 [![Kafka Adapter Video](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/images/adapter.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
 ```js
 Adpapters > Kafka Adapter > Broadcast_to_Kafka Config:
