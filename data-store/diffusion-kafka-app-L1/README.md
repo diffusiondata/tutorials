@@ -50,7 +50,7 @@ session.topicUpdate.createUpdateStream(_fxTopic, diffusion.datatypes.json()).set
 		offer : offer.toFixed(2)
 	});
 ```
-## **Step 4: Kafka Adapter Configuration**
+## **Step 4: Kafka Adapter Configuration: Broadcast to Kafka**
 ### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter](https://management.ad.diffusion.cloud/#!/login)
 [![Kafka Adapter Video](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/images/adapter.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
 ```js
