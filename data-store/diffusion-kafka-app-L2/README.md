@@ -11,16 +11,16 @@ These JavaScript code examples will help you publish fx data on real-time from a
 
 # APIs used in this application
 
-## Step 1: Topic Types and Specifications
-### [diffusion.topics.TopicSpecification](https://docs.pushtechnology.com/docs/6.5.1/js/classes/topicspecification.html) : [TopicType.TIME_SERIES](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#topictypeenum.time_series)
-
+## Step 1: Kafka Adapter Configuration > Ingest from Kafka
+### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter](https://management.ad.diffusion.cloud/#!/login)
+[![Kafka Adapter Video](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/ingest.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
 ```js
-diffusion.topics.TopicSpecification(diffusion.topics.TopicType.TIME_SERIES, 
-	{
-		TIME_SERIES_EVENT_VALUE_TYPE : "json",
-		TIME_SERIES_RETAINED_RANGE: "limit 100",
-		TIME_SERIES_SUBSCRIPTION_RANGE: "limit 100"
-	});
+Adpapters > Kafka Adapter > Ingest_from_Kafka Config:
+
+	Bootstrap Server > connect to you Kafka cluster > (eg: "kafka-plain.preprod-demo.pushtechnology.com:9094")
+	Diffusion service credentials > admin, password, > (use the "Security" tab to create a user or admin account)
+	Kafka Topic subscription > the source topic from your Kafka cluster > (eg: "kafka.firehose.fx")
+	Kafka Topic value type > we are using JSON but can be string, integer, byte, etc.
 ```
 ## Step 2: Append/Update Time Series
 ### [session.timeseries.append](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/timeseries.html#append)
