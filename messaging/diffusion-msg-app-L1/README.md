@@ -47,6 +47,8 @@ session.topicUpdate.set(_roomTopic, diffusion.datatypes.json(),
 		timestamp: new Date().toLocaleTimeString()
 	});
 ```
+# The code in action
+[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/images/code-example.png)](https://youtu.be/tTx8q4oPx7E?t=336)
 
 # Pre-requisites
 
