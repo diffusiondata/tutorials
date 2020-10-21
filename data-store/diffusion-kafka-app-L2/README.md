@@ -22,6 +22,12 @@ Adpapters > Kafka Adapter > Ingest_from_Kafka Config:
 	Kafka Topic subscription > the source topic from your Kafka cluster > (eg: "kafka.firehose.fx")
 	Kafka Topic value type > we are using JSON but can be string, integer, byte, etc.
 ```
+## Step 2: Check the Kafka stream is ingested
+### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
+We can see the `kafka.firehose.fx` stream from Kafka cluster (we set up on previous step) is now being ingested by Diffusion with the topic path: `kafka.firehose.fx`
+
+![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/kafka%20firehose.png)
+
 ## Step 2: Append/Update Time Series
 ### [session.timeseries.append](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/timeseries.html#append)
 ```js
