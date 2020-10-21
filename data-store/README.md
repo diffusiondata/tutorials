@@ -17,7 +17,7 @@ These JavaScript code examples will help you publish fx data on real-time from a
 [diffusion-kafka-app-L3](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L2) introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) and topic [path permissions](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/security/permissions_reference.html) for fine-grained security management of your data structure.
 
 # The code in action
-[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/code-example.png)](https://youtu.be/tTx8q4oPx7E?t=336)
+[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/images/code-example.png)](https://youtu.be/tTx8q4oPx7E?t=336)
 
 # Pre-requisites
 
