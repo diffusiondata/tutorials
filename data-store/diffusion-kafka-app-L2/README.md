@@ -9,7 +9,7 @@ These JavaScript code examples will help you publish fx data on real-time from a
 # Lesson 2: Ingest Kafka Topics (firehose) and Create Topic Views
 **diffusion-kafka-app-L2** introduces the concept of [Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html), a dynamic mechanism to map part of a server's [Topic Tree](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_tree.html) (data structure) to another. This enables real-time data transformation before sending it to subscribed clients as well as to create dynamic data models based on on-the-fly data (eg: Kafka firehose data).
 
-# APIs used in this application
+# Features used in this lesson
 
 ## Step 1: Kafka Adapter Configuration > Ingest from Kafka
 ### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter](https://management.ad.diffusion.cloud/#!/login)
