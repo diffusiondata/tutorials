@@ -8,7 +8,7 @@ A set of simple projects, illustrating production and consumption of foreign exc
 These JavaScript code examples will help you publish fx data on real-time from a front end app to a Kafka cluster, consume from it and transform data on-the-fly via our powerful [Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) feature. You can also use other programming languages from our [SDKs](https://docs.pushtechnology.com/#sdks), including iOS, Android, C, .NET, and more. 
 
 # Lesson 1: Publish events to Kafka cluster
-[diffusion-kafka-app-L1](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L1) introduces the concept of our [Kafka Adapter](https://www.pushtechnology.com/wp-content/uploads/2020/08/Diffusion-Cloud-Kafka-adapter.pdf) and its configuration. In this lesson, we will present how to configure Kafka adapter in cloud, to consume fx [topic data](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html) from 
+[diffusion-kafka-app-L1](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L1) introduces the concept of our [Kafka Adapter](https://www.pushtechnology.com/wp-content/uploads/2020/08/Diffusion-Cloud-Kafka-adapter.pdf), and how to configure Kafka adapter in cloud, to consume fx [topic data](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html) from 
  Diffusion server and publish it to Kafka cluster in specific Kafka topic.
 
 # Lesson 2: Ingest Kafka Topics (firehose) and Create Topic Views
