@@ -7,7 +7,7 @@ This project contains example code that demonstrates the use of the [Diffusion](
 Here, you will find complete code examples on a variety of programing languages (Javascript for now) to build applications in the following categories:
 
 * [Real-Time Messaging](https://github.com/pushtechnology/tutorials/tree/master/messaging)
-* [Real-time Event Stream with Kafka](https://github.com/pushtechnology/tutorials/tree/master/data-store)
+* [Real-Time Event Stream with Kafka](https://github.com/pushtechnology/tutorials/tree/master/data-store)
 * Real-time Apps (Web, Mobile, IoT)
 
 # Setup
