@@ -59,7 +59,7 @@ Adapters > Kafka Adapter > Broadcast_to_Kafka Config:
 
 	Broker > connect to you Kafka cluster > (eg: "kafka-plain.preprod-demo.pushtechnology.com:9094")
 	Diffusion service credentials > admin, password, > (use the "Security" tab to create a user or admin account)
-	Diffusion Topic > the data source from which messages are to be broadcasted to Kafka cluster > (eg: "diffusion.fx")
+	Diffusion Topic > source of events broadcasted to Kafka cluster > (eg: "diffusion.fx")
 	Kafka Topic > the destination Kafka topic at your Kafka cluster > (eg: "kafka.firehose.fx")
 
 ```
