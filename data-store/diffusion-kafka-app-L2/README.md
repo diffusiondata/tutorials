@@ -38,8 +38,8 @@ We are going to map `kafka.firehose.fx` stream (we set up on previous step) to a
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20views.png)
 
-## Step 4: Check the Topic View is dynamically branching and routing Kafka firehose event in real-time
-As new values are coming in from the Kafka firehose, Diffusion is dynamically branching and routing the currency pairs to the right sunscriber.
+## Step 4: Dynamic branching and routing of Kafka events firehose
+As new events are coming in from the Kafka firehose, Diffusion is dynamically branching and routing the currency pairs to the right sunscriber.
 
 **Note:** The topic path will dynamically change as new currency pair values come in.
 
