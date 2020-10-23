@@ -54,13 +54,13 @@ session.topicUpdate.createUpdateStream(_fxTopic, diffusion.datatypes.json()).set
 ## **Step 4: Configure Kafka Adapter in Cloud**
 ### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter > Broadcast to Kafka](https://management.ad.diffusion.cloud/#!/login)
 [![Kafka Adapter Video](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/images/adapter.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
-```js
+```
 Adapters > Kafka Adapter > Broadcast_to_Kafka Config:
 
-	Broker > connect to you Kafka cluster > (eg: "kafka-plain.preprod-demo.pushtechnology.com:9094")
-	Diffusion service credentials > admin, password, > (use the "Security" tab to create a user or admin account)
+	Broker > connect to your Kafka cluster > (eg: "kafka-plain.preprod-demo.pushtechnology.com:9094")
+	Diffusion service credentials > your admin, password, (use the "Security" tab to create a user or admin account)
 	Diffusion Topic > source of events broadcasted to Kafka cluster > (eg: "diffusion.fx")
-	Kafka Topic > the destination Kafka topic at your Kafka cluster > (eg: "kafka.firehose.fx")
+	Kafka Topic > destination Kafka topic at your Kafka cluster > (eg: "kafka.firehose.fx")
 
 ```
 			   
