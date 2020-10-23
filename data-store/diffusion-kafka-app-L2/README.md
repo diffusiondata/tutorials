@@ -34,11 +34,11 @@ Source value directives use the keyword [`scalar()`](https://www.pushtechnology.
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics > Topic Views](https://management.ad.diffusion.cloud/#!/login)
 We are going to map `kafka.firehose.fx` stream (we set up on previous step) to a new Diffusion Topic View with path: `kafka/fx/<scalar(/value/pairName)>` where `/value/pairName` is the Kafka payload currency `pairName` (from previous step).
 
-***This Topic View will take care of real-time dynamic branching and routing of event streams, by only sending the specific currency pair, the Kafka stream consumer is subscribed to, and not the whole stream.***
+***This Topic View will take care of dynamic branching and routing of event streams in real-time, by only sending the specific currency pair, the Kafka stream consumer is subscribed to, and not the whole stream.***
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20views.png)
 
-## Step 4: Check the Topic View is multiplexing the Kafka firehose
+## Step 4: Check the Topic View is dynamically branching and routing Kafka firehose event in real-time
 As new values are coming in from the Kafka firehose, Diffusion is dynamically branching and routing the currency pairs to the right sunscriber.
 
 **Note:** The topic path will dynamically change as new currency pair values come in.
