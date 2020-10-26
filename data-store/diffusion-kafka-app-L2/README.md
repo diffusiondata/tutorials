@@ -47,6 +47,25 @@ As new events are coming in from the Kafka firehose, Diffusion is dynamically br
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20path.png)
 
+## Suggested READ: 6 Leasons Using Topic View
+### Lesson 1: [Mapping Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-1.mapping-topics/)
+ Map topic to topic.
+
+### Lesson 2: [Mapping Topic Branches](https://www.pushtechnology.com/blog/tutorial/using-topic-views-2.mapping-topic-branches/)
+ Map branch to branch.
+
+### Lesson 3: [Lesson 3: Extracting Source Topic Values](https://www.pushtechnology.com/blog/tutorial/using-topic-views-3.-extracting-source-topic-values/)
+ Building reference topics from parts of the source topic.
+
+### Lesson 4: [Throttling Reference Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-4.throttling-reference-topics/)
+ Building low cost throttled reference topics.
+
+### Lesson 5: [Naming Reference Topic With Topic Content](https://www.pushtechnology.com/blog/tutorial/using-topic-views-5.naming-reference-topic-with-topic-content/)
+ Naming a reference topic with content from the source topic.
+
+### Lesson 6: [Changing Topic Properties Of Reference Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-6.changing-topic-properties-of-reference-topics/)
+ Changing the topic properties of a reference topic.
+
 # Pre-requisites
 
 *  Download our code examples or clone them to your local environment:
