@@ -37,7 +37,10 @@ We can see the events from ``kafka.firehose.fx`` Kafka topic (we set up on previ
 ## Step 4: Dynamic branching and routing of Kafka events firehose
 As new events are coming in from the Kafka firehose, Diffusion is dynamically branching and routing the currency pairs to the right sunscriber.
 
-**Note:** The topic path will dynamically change as new currency pair values come in.
+**Note:** In this example, the subscriber app is listening for changes in topic ``_fxTopic`` and its values, in this case:
+```js
+_fxTopic = "kafka/fx/USD:EUR";
+```
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20path.png)
