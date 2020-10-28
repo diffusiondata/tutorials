@@ -19,7 +19,7 @@ diffusion.connect({
 	principal : "user",
 	credentials : "password"})
 ```
-## Step 2: Create a Topic Listener**
+## **Step 2: Create a Topic Listener**
 ### [session.addStream](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/session.html#addstream)
 ```js
 session.addStream(_fxTopic, diffusion.datatypes.json());
@@ -29,16 +29,13 @@ session.addStream(_fxTopic, diffusion.datatypes.json());
 ```js
 session.select(_fxTopic);
 ```
-
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
-We can see the `kafka.firehose.fx` stream from Kafka cluster (we set up on previous step) is now being ingested by Diffusion with the topic path: `kafka.firehose.fx`
+We can see the events from ``kafka.firehose.fx`` Kafka topic (we set up on previous step) is now being published to Diffusion topic path: ``kafka.firehose.fx``. If there are no new events, it might be because the `kafka.firehose.fx` topic has not received any updates from Kafka.
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/kafka%20firehose.png)
 
-![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20views.png)
-
-## Step 4: Check the Topic View is multiplexing the Kafka firehose
-As new values are coming in from the Kafka firehose, Diffusion is multiplexing and publishing the currency pairs on real-time.
+## Step 4: Dynamic branching and routing of Kafka events firehose
+As new events are coming in from the Kafka firehose, Diffusion is dynamically branching and routing the currency pairs to the right sunscriber.
 
 **Note:** The topic path will dynamically change as new currency pair values come in.
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
