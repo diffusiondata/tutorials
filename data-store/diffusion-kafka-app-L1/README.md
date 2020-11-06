@@ -1,15 +1,15 @@
 # diffusion-kafka-app-L1
 
-Introduction to Diffusion Real-Time Data Store through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud and Apache Kafka.
+Introduction to Diffusion Real-Time Event Stream through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud and Apache Kafka.
 
-A set of simple projects, illustrating production and consumption of foreign exchange (fx) data streams to and from Kafka clusters and Diffusion Cloud instance via the use of our [Kafka Adapter](https://www.pushtechnology.com/wp-content/uploads/2020/08/Diffusion-Cloud-Kafka-adapter.pdf).
+A set of simple projects, illustrating production and consumption of foreign exchange (fx) event streams to and from Kafka clusters and Diffusion Cloud instance via the use of our [Kafka Adapter](https://www.pushtechnology.com/wp-content/uploads/2020/08/Diffusion-Cloud-Kafka-adapter.pdf).
 
-These JavaScript code examples will help you publish fx data on real-time from a front end app to a Kafka cluster, consume from it and transform data on-the-fly via our powerful [Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) feature. You can also use other programming languages from our [SDKs](https://docs.pushtechnology.com/#sdks), including iOS, Android, C, .NET, and more. 
+These JavaScript code examples will help you publish fx events on real-time from a front end app to a Kafka cluster, consume from it and transform data on-the-fly via our powerful [Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) feature. You can also use other programming languages from our [SDKs](https://docs.pushtechnology.com/#sdks), including iOS, Android, C, .NET, and more. 
 
 # Lesson 1: Publish Topics to Kafka cluster
-**diffusion-kafka-app-L1** introduces the concept of our [Kafka Adapter](https://www.pushtechnology.com/wp-content/uploads/2020/08/Diffusion-Cloud-Kafka-adapter.pdf) and its configuration, as well as how to Publish fx data to ['Topics' (data structures)](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html). In Diffusion, data is stored and distributed through Topics (similar to Kafka).
+**diffusion-kafka-app-L1** introduces the concept of our [Kafka Adapter](https://www.pushtechnology.com/wp-content/uploads/2020/08/Diffusion-Cloud-Kafka-adapter.pdf) and its configuration, to consume fx [topic data](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html) from your Diffusion server and publish it to Kafka cluster in specific Kafka topic.
 
-# APIs used in this application
+# APIs used to build the publisher app
 
 ## **Step 1: Connect to Diffusion**
 ### [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
@@ -25,8 +25,9 @@ diffusion.connect({
 session.topics.add(_fxTopic, diffusion.topics.TopicType.JSON);
 ```
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
-We are seeting up `_fxTopic` with the topic path: `diffusion.fx`
+We are setting up `_fxTopic` with the topic path: `diffusion.fx`
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/images/topics.png)
+
 ## **Step 3: Update a Topic**
 ### [session.topicUpdate.set](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/topicupdate.html#set)
 ```js
@@ -50,16 +51,16 @@ session.topicUpdate.createUpdateStream(_fxTopic, diffusion.datatypes.json()).set
 		offer : offer.toFixed(2)
 	});
 ```
-## **Step 4: Kafka Adapter Configuration > Broadcast to Kafka**
-### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter](https://management.ad.diffusion.cloud/#!/login)
+## **Step 4: Configure Kafka Adapter in Cloud**
+### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter > Broadcast to Kafka](https://management.ad.diffusion.cloud/#!/login)
 [![Kafka Adapter Video](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/images/adapter.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
-```js
-Adpapters > Kafka Adapter > Broadcast_to_Kafka Config:
+```
+Adapters > Kafka Adapter > Broadcast_to_Kafka Config:
 
-	Broker > connect to you Kafka cluster > (eg: "kafka-plain.preprod-demo.pushtechnology.com:9094")
-	Diffusion service credentials > admin, password, > (use the "Security" tab to create a user or admin account)
-	Diffusion Topic > the data source to broadcast to Kafka cluster > (eg: "diffusion.fx")
-	Kafka Topic > the destination topic at your Kafka cluster > (eg: "kafka.fx")
+	Broker > connect to your Kafka cluster (eg: "kafka-plain.preprod-demo.pushtechnology.com:9094")
+	Diffusion service credentials > your admin, password (use the "Security" tab to create a user or admin account)
+	Diffusion Topic > source of events broadcasted to Kafka cluster (eg: "diffusion.fx")
+	Kafka Topic > destination Kafka topic at your Kafka cluster (eg: "kafka.firehose.fx")
 
 ```
 			   
