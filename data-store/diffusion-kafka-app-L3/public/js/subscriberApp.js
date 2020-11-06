@@ -48,7 +48,7 @@ parametersForm.onsubmit = (evt) => {
     // Sign up to Diffusion Cloud and get your service up a running in a minute.
     diffusion.connect({
         host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway.us.diffusion.cloud"
-        principal : "user",
+        principal : "GBP:EUR Subscriber", // This user only have access to a specif topic path "kafka/fx/GBP:EUR"
         credentials : "password"
     }).then(
         (session) => {
@@ -82,29 +82,26 @@ function displayMessage(topic, specification, newValue, oldValue) {
     
     let msg = newValue.get();
 
-    if (_fxTopic == "kafka/fx/" + msg.value.pairName) { // Workaround to the topic view issue https://manuscript.pushtechnology.com/f/cases/24032/Bug-subscribing-to-Topic-Views
+    // insert messages in container
+    let container = document.getElementById("messages");
+	let entry = document.createElement("li");
+	entry.classList.add("list-group-item");
 
-        // insert messages in container
-        let container = document.getElementById("messages");
-        let entry = document.createElement("li");
-        entry.classList.add("list-group-item");
-
-        let header = document.createElement("strong");
-        header.innerText = "partition: " + msg.partition + "  |  key: " + msg.key + "  |  fx value: " + msg.value.pairName;
+	let header = document.createElement("strong");
+	header.innerText = "partition: " + msg.partition + "  |  key: " + msg.key + "  |  fx value: " + msg.value.pairName;
 	
-        let content = document.createElement("p");
-        content.innerText = "timestamp: " + msg.value.timestamp + "  |  bid: " + msg.value.bid + "  |  offer: " + msg.value.offer;
+	let content = document.createElement("p");
+	content.innerText = "timestamp: " + msg.value.timestamp + "  |  bid: " + msg.value.bid + "  |  offer: " + msg.value.offer;
 
-        entry.appendChild(header);
-        entry.appendChild(content);
-        container.appendChild(entry);
+	entry.appendChild(header);
+	entry.appendChild(content);
+	container.appendChild(entry);
 
-        // Scroll to bottom of container, to show latest message.
-        container.scrollTop = container.scrollHeight - container.clientHeight;
+	// Scroll to bottom of container, to show latest message.
+	container.scrollTop = container.scrollHeight - container.clientHeight;
 
 	// passing x,y points to JSCharting to graph fx
-        chart.series(0).points.add({  y:parseFloat(msg.value.bid),  x:msg.value.timestamp },{shift: useShift});
-    }
+	chart.series(0).points.add({  y:parseFloat(msg.value.bid),  x:msg.value.timestamp },{shift: useShift});
 }
 
 // function to shift points in fx graph
