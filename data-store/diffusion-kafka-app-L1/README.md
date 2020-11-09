@@ -57,7 +57,7 @@ session.topicUpdate.createUpdateStream(_fxTopic, diffusion.datatypes.json()).set
 ```
 Adapters > Kafka Adapter > Broadcast_to_Kafka Config:
 
-	Broker > connect to your Kafka cluster (eg: "kafka-plain.preprod-demo.pushtechnology.com:9094")
+	Bootstrap Server > connect to your Kafka cluster (eg: "kafka-plain.preprod-demo.pushtechnology.com:9094")
 	Diffusion service credentials > your admin, password (use the "Security" tab to create a user or admin account)
 	Diffusion Topic > source of events broadcasted to Kafka cluster (eg: "diffusion.fx")
 	Kafka Topic > destination Kafka topic at your Kafka cluster (eg: "kafka.firehose.fx")
@@ -70,7 +70,7 @@ Adapters > Kafka Adapter > Broadcast_to_Kafka Config:
 ```
  git clone https://github.com/pushtechnology/tutorials/
 ```
-* A Diffusion service (Cloud or On-Premise), version 6.5.0 or greater. Create a service [here](https://management.ad.diffusion.cloud/).
+* A Diffusion service (Cloud or On-Premise), version 6.6 (update to latest preview version) or greater. Create a service [here](https://management.ad.diffusion.cloud/).
 * Follow our [Quick Start Guide](https://docs.pushtechnology.com/quickstart/#diffusion-cloud-quick-start) and get your service up in a minute!
 
 # Setup
