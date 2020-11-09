@@ -36,7 +36,7 @@ Source value directives use the keyword [`scalar()`](https://www.pushtechnology.
 There are also other directives like [`expand()` value directive](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) to create multiple reference topics from a single JSON source topic, or [`value()` directive](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) to create a [new JSON value](https://www.pushtechnology.com/blog/new-topic-view-features-in-6.4) with a subset of a JSON source topic.
 
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics > Topic Views](https://management.ad.diffusion.cloud/#!/login)
-We are going to map `kafka.firehose.fx` stream (we set up on previous step) to a new Diffusion Topic View with path: `kafka/fx/<scalar(/value/pairName)>` where `/value/pairName` is the Kafka payload currency `pairName` (from previous step).
+We are going to `map` `kafka.firehose.fx` stream (we set up on previous step) `to` a new Diffusion Topic View with path: `kafka/fx/<scalar(/value/pairName)>` where `/value/pairName` is the Kafka payload currency `pairName` (from previous step).
 
 ***This Topic View will take care of dynamic branching and routing of event streams in real-time, by only sending the specific currency pair, the Kafka stream consumer is subscribed to, and not the whole stream.***
 
