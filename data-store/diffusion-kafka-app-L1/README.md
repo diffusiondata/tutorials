@@ -70,7 +70,7 @@ Adapters > Kafka Adapter > Broadcast_to_Kafka Config:
 ```
  git clone https://github.com/pushtechnology/tutorials/
 ```
-* A Diffusion service (Cloud or On-Premise), version 6.5.0 or greater. Create a service [here](https://management.ad.diffusion.cloud/).
+* A Diffusion service (Cloud or On-Premise), version 6.6 (update to latest preview version) or greater. Create a service [here](https://management.ad.diffusion.cloud/).
 * Follow our [Quick Start Guide](https://docs.pushtechnology.com/quickstart/#diffusion-cloud-quick-start) and get your service up in a minute!
 
 # Setup
