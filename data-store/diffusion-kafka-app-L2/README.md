@@ -21,6 +21,7 @@ Adapters > Kafka Adapter > Ingest_from_Kafka Config:
 	Diffusion service credentials > admin, password (use the "Security" tab to create a user or admin account)
 	Kafka Topic subscription > the source topic from your Kafka cluster (eg: "kafka.firehose.fx")
 	Kafka Topic value type > we are using JSON but can be string, integer, byte, etc.
+	Kafka Topic key type > use string type for this code example.
 ```
 
 ## Step 2: Check the Kafka stream is ingested
@@ -41,8 +42,12 @@ We are going to map `kafka.firehose.fx` stream (we set up on previous step) to a
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20views.png)
 
+***This is another example combining scalar and expand value directives:***
+
+`map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>/<expand(/value)>`
+
 ## Step 4: Dynamic branching and routing of Kafka events firehose
-As new events are coming in from the Kafka firehose, Diffusion is dynamically branching and routing the currency pairs to the right sunscriber.
+As new events are coming in from the Kafka firehose, Diffusion is dynamically branching and routing the currency pairs to the right subscriber.
 
 **Note:** The topic path will dynamically change as new currency pair values come in.
 
@@ -57,6 +62,28 @@ As new events are coming in from the Kafka firehose, Diffusion is dynamically br
 ### Lesson 4: [Throttling Reference Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-4.throttling-reference-topics/)
 ### Lesson 5: [Naming Reference Topic With Topic Content](https://www.pushtechnology.com/blog/tutorial/using-topic-views-5.naming-reference-topic-with-topic-content/)
 ### Lesson 6: [Changing Topic Properties Of Reference Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-6.changing-topic-properties-of-reference-topics/)
+
+# APIs used in the subscriber application
+
+## **Step 1: Connect to Diffusion**
+### [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
+```js
+diffusion.connect({
+	host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway.eu.diffusion.cloud"
+	principal : "user", // This user have access to all topic tree, so no granular security is done here (check lesson 3 for security and permissions)
+	credentials : "password"})
+```
+## **Step 2: Create a Topic Listener**
+### [session.addStream](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/session.html#addstream)
+In this case `_fxTopic` is the path to the currency pairName, eg: `kafka/fx/GBP:EUR`
+```js
+session.addStream(_fxTopic, diffusion.datatypes.json());
+```
+## **Step 3: Subscribe to a Topic**
+### [session.select](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/session.html#select)
+```js
+session.select(_fxTopic);
+```
 
 # Pre-requisites
 
@@ -73,7 +100,7 @@ Make sure to add Diffusion library to your code. For JavaScript, we have added t
 ```
 <script src='https://download.pushtechnology.com/clients/6.5.1/js/diffusion-6.5.1.js'></script>
 ```
-Set lines 32-34 of `public/js/producerApp.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
+Set lines 32-34 of `public/js/producerApp.js` and lines 50-52 of `public/js/subscriberApp.js`to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
 * host: host ("kafkagateway.us.diffusion.cloud" by default)
 * user: 'user'
