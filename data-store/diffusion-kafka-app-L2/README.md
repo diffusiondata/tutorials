@@ -51,6 +51,28 @@ As new events are coming in from the Kafka firehose, Diffusion is dynamically br
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20path.png)
 
+# APIs used in the subscriber application
+
+## **Step 1: Connect to Diffusion**
+### [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
+```js
+diffusion.connect({
+	host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway.eu.diffusion.cloud"
+	principal : "user", // This user have access to all topic tree, so no granular security is done here (check lesson 3 for security and permissions)
+	credentials : "password"})
+```
+## **Step 2: Create a Topic Listener**
+### [session.addStream](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/session.html#addstream)
+In this case `_fxTopic` is the path to the currency pairName, eg: kafka/fx/GBP:EUR
+```js
+session.addStream(_fxTopic, diffusion.datatypes.json());
+```
+## **Step 3: Subscribe to a Topic**
+### [session.select](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/session.html#select)
+```js
+session.select(_fxTopic);
+```
+
 ## Suggested: 6 Leasons Using Topic Views
 ### Lesson 1: [Mapping Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-1.mapping-topics/)
 ### Lesson 2: [Mapping Topic Branches](https://www.pushtechnology.com/blog/tutorial/using-topic-views-2.mapping-topic-branches/)
