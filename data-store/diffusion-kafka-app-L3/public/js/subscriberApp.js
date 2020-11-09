@@ -48,7 +48,7 @@ parametersForm.onsubmit = (evt) => {
     // Sign up to Diffusion Cloud and get your service up a running in a minute.
     diffusion.connect({
         host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway.us.diffusion.cloud"
-        principal : "GBP:EUR Subscriber", // This user only have access to a specif topic path "kafka/fx/GBP:EUR"
+        principal : "GBP:EUR Subscriber", // This user only have access to a specific topic path: "kafka/fx/GBP:EUR"
         credentials : "password"
     }).then(
         (session) => {
