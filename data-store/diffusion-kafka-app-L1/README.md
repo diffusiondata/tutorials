@@ -57,7 +57,7 @@ session.topicUpdate.createUpdateStream(_fxTopic, diffusion.datatypes.json()).set
 ```
 Adapters > Kafka Adapter > Broadcast_to_Kafka Config:
 
-	Broker > connect to your Kafka cluster (eg: "kafka-plain.preprod-demo.pushtechnology.com:9094")
+	Bootstrap Server > connect to your Kafka cluster (eg: "kafka-plain.preprod-demo.pushtechnology.com:9094")
 	Diffusion service credentials > your admin, password (use the "Security" tab to create a user or admin account)
 	Diffusion Topic > source of events broadcasted to Kafka cluster (eg: "diffusion.fx")
 	Kafka Topic > destination Kafka topic at your Kafka cluster (eg: "kafka.firehose.fx")
