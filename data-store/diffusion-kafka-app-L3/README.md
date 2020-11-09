@@ -16,7 +16,7 @@ These JavaScript code examples will help you publish fx events on real-time from
 ```js
 diffusion.connect({
 	host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway.eu.diffusion.cloud"
-	principal : "GBP:EUR Subscriber", // This user only have access to a specific topic path: "kafka/fx/GBP:EUR"
+	principal : "GBP:EUR Subscriber", // This user only has access to a specific topic path: "kafka/fx/GBP:EUR"
 	credentials : "password"
 })
 ```
@@ -42,7 +42,7 @@ Since we have a new role `GBP:EUR`, now we can create users with that role. Lets
 
 ```js
 diffusion.connect({
-	user: "GBP:EUR Subscriber", // This user only have access to a specific topic path: "kafka/fx/GBP:EUR"
+	user: "GBP:EUR Subscriber", // This user only has access to a specific topic path: "kafka/fx/GBP:EUR"
 ```
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L3/images/users.png)
@@ -71,7 +71,7 @@ Make sure to add Diffusion library to your code. For JavaScript, we have added t
 Set lines 50-52 of `public/js/subscriberApp.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
 * host: host ("kafkagateway.us.diffusion.cloud" by default)
-* user: "GBP:EUR Subscriber", // This user only have access to a specific topic path: "kafka/fx/GBP:EUR"
+* user: "GBP:EUR Subscriber", // This user only has access to a specific topic path: "kafka/fx/GBP:EUR"
 * password: 'password'
 
 # Execution
