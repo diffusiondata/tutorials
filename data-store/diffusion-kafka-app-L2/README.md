@@ -72,7 +72,7 @@ As new events are coming in from the Kafka firehose, Diffusion is dynamically br
 ```js
 diffusion.connect({
 	host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway.eu.diffusion.cloud"
-	principal : "user", // This user have access to all topic tree, so no granular security is done here (check lesson 3 for security and permissions)
+	principal : "user", // This user has access to all topic tree, so no granular security is done here (check lesson 3 for security and permissions)
 	credentials : "password"})
 ```
 ## **Step 2: Create a Topic Listener**
