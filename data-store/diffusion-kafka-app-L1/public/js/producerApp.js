@@ -1,5 +1,5 @@
 let _session = null;
-let _fxTopic = "diffusion.fx";
+let _fxTopic = "diffusion.fx";  // This is the Diffusion topic where we publish the fx data stream. Then Kafka adapter will broadcast this stream into Kafka cluster.
 
 let bid, offer;
 
@@ -65,14 +65,10 @@ function publishFX(loop, frequency, totalLoops) {
 		//_session.topicUpdate.createUpdateStream(_fxTopic, diffusion.datatypes.json()).set(
 		_session.topicUpdate.set(_fxTopic, diffusion.datatypes.json(), 
 					{
-						partition: 0, // simulate kafka partition
-						value: {
-							pairName : pairName,
-							timestamp : new Date().getTime(),
-							bid : bid.toFixed(2),
-							offer : offer.toFixed(2)
-						},
-						key: "1" // simulate kafka key
+						pairName : pairName,
+						timestamp : new Date().getTime(),
+						bid : bid.toFixed(2),
+						offer : offer.toFixed(2)
 					}
 		);
 		
