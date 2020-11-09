@@ -51,7 +51,7 @@ diffusion.connect({
 ```js
 _fxTopic = "kafka/fx/GBP:EUR";
 ```
-Any other topic we try to subscribe to, we will NOT recieve any updates as the granular security setup here will not allow it. For the avility to subscribe to all or any topics, please check lesson 2.
+If we subscribe to any other topic (or currency pairNAme), we will NOT recieve any updates, as the granular security setup here, will not allow it.
 
 # Pre-requisites
 
