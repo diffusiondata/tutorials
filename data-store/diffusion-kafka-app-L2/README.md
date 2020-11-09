@@ -21,6 +21,7 @@ Adapters > Kafka Adapter > Ingest_from_Kafka Config:
 	Diffusion service credentials > admin, password (use the "Security" tab to create a user or admin account)
 	Kafka Topic subscription > the source topic from your Kafka cluster (eg: "kafka.firehose.fx")
 	Kafka Topic value type > we are using JSON but can be string, integer, byte, etc.
+	Kafka Topic key type > use string type for this code example.
 ```
 
 ## Step 2: Check the Kafka stream is ingested
