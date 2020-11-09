@@ -100,7 +100,7 @@ Make sure to add Diffusion library to your code. For JavaScript, we have added t
 ```
 <script src='https://download.pushtechnology.com/clients/6.5.1/js/diffusion-6.5.1.js'></script>
 ```
-Set lines 32-34 of `public/js/producerApp.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
+Set lines 32-34 of `public/js/producerApp.js` and lines 50-52 of `public/js/subscriberApp.js`to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
 * host: host ("kafkagateway.us.diffusion.cloud" by default)
 * user: 'user'
