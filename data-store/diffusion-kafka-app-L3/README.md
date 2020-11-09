@@ -9,18 +9,20 @@ These JavaScript code examples will help you publish fx events on real-time from
 # Lesson 3: Subscribe to Kafka Topic Views
 **diffusion-kafka-app-L3** introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) and topic [path permissions](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/security/permissions_reference.html) for fine-grained security management of your data structure. It also shows how to Subscribe to fx data using [Diffusion Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) in order to consume what you need, not all the Kafka stream.
 
-# APIs used in this application
+# APIs used in the secure subscriber application
 
 ## **Step 1: Connect to Diffusion**
 ### [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
 ```js
 diffusion.connect({
 	host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway.eu.diffusion.cloud"
-	principal : "user",
-	credentials : "password"})
+	principal : "GBP:EUR Subscriber", // This user only have access to a specific topic path: "kafka/fx/GBP:EUR"
+	credentials : "password"
+})
 ```
 ## **Step 2: Create a Topic Listener**
 ### [session.addStream](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/session.html#addstream)
+In this case `_fxTopic` is the path to the currency pairName, eg: `kafka/fx/GBP:EUR`
 ```js
 session.addStream(_fxTopic, diffusion.datatypes.json());
 ```
@@ -39,7 +41,7 @@ As new events are coming in from the Kafka firehose, Diffusion is dynamically br
 
 **Note:** In this example, the subscriber app is listening for changes in topic ``_fxTopic`` and its values, in this case:
 ```js
-_fxTopic = "kafka/fx/USD:EUR";
+_fxTopic = "kafka/fx/GBP:EUR";
 ```
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
 
@@ -63,7 +65,7 @@ Make sure to add Diffusion library to your code. For JavaScript, we have added t
 Set lines 50-52 of `public/js/subscriberApp.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
 * host: host ("kafkagateway.us.diffusion.cloud" by default)
-* user: 'user'
+* user: "GBP:EUR Subscriber", // This user only have access to a specific topic path: "kafka/fx/GBP:EUR"
 * password: 'password'
 
 # Execution
