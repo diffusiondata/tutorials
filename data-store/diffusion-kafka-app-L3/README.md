@@ -31,21 +31,26 @@ session.addStream(_fxTopic, diffusion.datatypes.json());
 ```js
 session.select(_fxTopic);
 ```
+## **Step 4: Create a new Role**
 ### Go to: [Diffusion Cloud > Manage Service > Console > Security](https://management.ad.diffusion.cloud/#!/login)
 We will create a new role called `GBP:EUR` and we will give 'read only' access to a specific topic path: `kafka/fx/GBP:EUR`. This means, any user with `GBP:EUR` role, will only be able to subscribe to new values coming from Kafka firehose when the pairName is `GBP:EUR`
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L3/images/roles.png)
 
-## Step 4: Dynamic branching and routing of Kafka events firehose
-As new events are coming in from the Kafka firehose, Diffusion is dynamically branching and routing the currency pairs to the right sunscriber.
+### Go to: [Diffusion Cloud > Manage Service > Console > Authentication](https://management.ad.diffusion.cloud/#!/login)
+Since we have a new role `GBP:EUR`, now we can create users with that role. Lets create `GBP:EUR Subscriber`. This is the user we will use in our code, lines 51 of `public/js/subscriberApp.js`
+
+```js
+diffusion.connect({
+	user: "GBP:EUR Subscriber", // This user only have access to a specific topic path: "kafka/fx/GBP:EUR"
+```
+
+![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L3/images/users.png)
 
 **Note:** In this example, the subscriber app is listening for changes in topic ``_fxTopic`` and its values, in this case:
 ```js
 _fxTopic = "kafka/fx/GBP:EUR";
 ```
-### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
-
-![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20path.png)
 
 # Pre-requisites
 
