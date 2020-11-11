@@ -6,7 +6,7 @@ A set of simple projects, illustrating production and consumption of foreign exc
 
 These JavaScript code examples will help you publish fx events on real-time from a front end app to a Kafka cluster, consume from it and transform data on-the-fly via our powerful [Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) feature. You can also use other programming languages from our [SDKs](https://docs.pushtechnology.com/#sdks), including iOS, Android, C, .NET, and more. 
 
-# Lesson 3: Subscribe to Kafka Topic Views
+# Lesson 3: Security using Access control Subscribe to Kafka Topic Views
 **diffusion-kafka-app-L3** introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) and topic [path permissions](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/security/permissions_reference.html) for fine-grained security management of your data structure. It also shows how to Subscribe to fx data using [Diffusion Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) in order to consume what you need, not all the Kafka stream.
 
 # APIs used in the secure subscriber application
@@ -16,7 +16,7 @@ These JavaScript code examples will help you publish fx events on real-time from
 ```js
 diffusion.connect({
 	host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway.eu.diffusion.cloud"
-	principal : "GBP:EUR Subscriber", // This user only have access to a specific topic path: "kafka/fx/GBP:EUR"
+	principal : "GBP:EUR Subscriber", // This user only has access to a specific topic path: "kafka/fx/GBP:EUR"
 	credentials : "password"
 })
 ```
@@ -31,21 +31,27 @@ session.addStream(_fxTopic, diffusion.datatypes.json());
 ```js
 session.select(_fxTopic);
 ```
-### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
-We can see the events from ``kafka.firehose.fx`` Kafka topic (we set up on previous step) is now being published to Diffusion topic path: ``kafka.firehose.fx``. If there are no new events, it might be because the `kafka.firehose.fx` topic has not received any updates from Kafka.
+## **Step 4: Create a new Role**
+### Go to: [Diffusion Cloud > Manage Service > Console > Security](https://management.ad.diffusion.cloud/#!/login)
+We will create a new role called `GBP:EUR` and we will give 'read only' access to a specific topic path: `kafka/fx/GBP:EUR`. This means, any user with `GBP:EUR` role, will only be able to subscribe to new values coming from Kafka firehose when the pairName is `GBP:EUR`
 
-![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/kafka%20firehose.png)
+![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L3/images/roles.png)
 
-## Step 4: Dynamic branching and routing of Kafka events firehose
-As new events are coming in from the Kafka firehose, Diffusion is dynamically branching and routing the currency pairs to the right sunscriber.
+### Go to: [Diffusion Cloud > Manage Service > Console > Authentication](https://management.ad.diffusion.cloud/#!/login)
+Since we have a new role `GBP:EUR`, now we can create users with that role. Lets create `GBP:EUR Subscriber`. This is the user we will use in our code, lines 51 of `public/js/subscriberApp.js`
+
+```js
+diffusion.connect({
+	user: "GBP:EUR Subscriber", // This user only has access to a specific topic path: "kafka/fx/GBP:EUR"
+```
+
+![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L3/images/users.png)
 
 **Note:** In this example, the subscriber app is listening for changes in topic ``_fxTopic`` and its values, in this case:
 ```js
 _fxTopic = "kafka/fx/GBP:EUR";
 ```
-### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
-
-![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20path.png)
+If we subscribe to any other topic (or currency pairNAme), we will NOT recieve any updates, as the granular security setup here, will not allow it.
 
 # Pre-requisites
 
@@ -65,7 +71,7 @@ Make sure to add Diffusion library to your code. For JavaScript, we have added t
 Set lines 50-52 of `public/js/subscriberApp.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
 You can also leave the default values and connect to our sandbox service:
 * host: host ("kafkagateway.us.diffusion.cloud" by default)
-* user: "GBP:EUR Subscriber", // This user only have access to a specific topic path: "kafka/fx/GBP:EUR"
+* user: "GBP:EUR Subscriber", // This user only has access to a specific topic path: "kafka/fx/GBP:EUR"
 * password: 'password'
 
 # Execution
