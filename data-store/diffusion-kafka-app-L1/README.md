@@ -6,7 +6,7 @@ A set of simple projects, illustrating production and consumption of foreign exc
 
 These JavaScript code examples will help you publish fx events on real-time from a front end app to a Kafka cluster, consume from it and transform data on-the-fly via our powerful [Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) feature. You can also use other programming languages from our [SDKs](https://docs.pushtechnology.com/#sdks), including iOS, Android, C, .NET, and more. 
 
-# Lesson 1: Publish Topics to Kafka cluster
+# Lesson 1: Publish event streams to Kafka cluster
 **diffusion-kafka-app-L1** introduces the concept of our [Kafka Adapter](https://www.pushtechnology.com/wp-content/uploads/2020/08/Diffusion-Cloud-Kafka-adapter.pdf) and its configuration, to consume fx [topic data](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html) from your Diffusion server and publish it to Kafka cluster in specific Kafka topic.
 
 # APIs used to build the publisher app
