@@ -7,13 +7,13 @@ A set of simple projects, illustrating production and consumption of foreign exc
 
 These JavaScript code examples will help you publish fx data on real-time from a front end app to a Kafka cluster, consume from it and transform data on-the-fly via our powerful [Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) feature. You can also use other programming languages from our [SDKs](https://docs.pushtechnology.com/#sdks), including iOS, Android, C, .NET, and more. 
 
-# Lesson 1: Publish events to Kafka cluster
+# Lesson 1: Publish event streams to Kafka cluster
 [diffusion-kafka-app-L1](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L1) introduces the concept of our [Kafka Adapter](https://www.pushtechnology.com/wp-content/uploads/2020/08/Diffusion-Cloud-Kafka-adapter.pdf) and its configuration, to consume fx [topic data](https://docs.pushtechnology.com/docs/6.5.1/manual/html/introduction/overview/topics_data.html) from your Diffusion server and publish it to Kafka cluster in specific Kafka topic.
 
-# Lesson 2: Ingest Kafka Topics (firehose) and Create Topic Views
+# Lesson 2: Fine-grained distribution of Kafka event firehose with Topic Views
 [diffusion-kafka-app-L2](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L2) introduces the concept of [Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html), a dynamic mechanism to map part of a server's [Topic Tree](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_tree.html) (data structure) to another. This enables real-time data transformation before sending it to subscribed clients as well as to create dynamic data models based on on-the-fly data (eg: Kafka firehose data).
 
-# Lesson 3: Subscribe to Kafka Topic Views
+# Lesson 3: Security with Topic-level access control
 [diffusion-kafka-app-L3](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L3) introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) and topic [path permissions](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/security/permissions_reference.html) for fine-grained security management of your data structure. It also shows how to Subscribe to fx data using [Diffusion Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) in order to consume what you need, not all the Kafka stream.
 
 # The code in action
