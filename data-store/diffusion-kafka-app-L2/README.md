@@ -52,6 +52,8 @@ We are going to `map` `kafka.firehose.fx` stream (we set up on previous step) `t
 
 Specification: `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>/<expand(/value)>`
 
+![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/expand.png)
+
 ## Step 4: Dynamic branching and routing of Kafka events firehose
 As new events are coming in from the Kafka firehose, Diffusion is dynamically branching and routing the currency pairs to the right subscriber.
 
