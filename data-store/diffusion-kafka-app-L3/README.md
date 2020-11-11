@@ -11,7 +11,7 @@ These JavaScript code examples will help you publish fx events on real-time from
 
 # APIs used in the secure subscriber application
 
-## **Step 1: Connect to Diffusion**
+## **Step 1: Connect to Diffusion with user: `GBP:EUR Subscriber`**
 ### [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
 ```js
 diffusion.connect({
