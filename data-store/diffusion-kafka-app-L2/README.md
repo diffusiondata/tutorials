@@ -49,8 +49,7 @@ We are going to `map` `kafka.firehose.fx` stream (we set up on previous step) `t
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20views.png)
 
-***This is another example combining scalar and expand value directives:***
-
+***Alternatively, this is another example combining scalar and expand value directives used for dynamic branching and routing of event streams in real-time:***
 ##### Topic View Specification:
 ##### `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>/<expand(/value)>`
 
@@ -61,9 +60,11 @@ As new events are coming in from the Kafka firehose, Diffusion is dynamically br
 
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
 
+##### The following image shows a Topic View for the following specification:
 ##### `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>`
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20path.png)
 
+##### Alternatively, the following image shows a Topic View for the following specification:
 ##### `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>/<expand(/value)>`
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/expand.png)
 
