@@ -44,15 +44,15 @@ We are going to `map` `kafka.firehose.fx` stream (we set up on previous step) `t
 
 ***This Topic View will take care of dynamic branching and routing of event streams in real-time, by only sending the specific currency pair, the Kafka stream consumer is subscribed to, and not the whole stream.***
 
-## Topic View Specification: `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>`
+##### Topic View Specification:
+##### `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>`
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20views.png)
 
 ***This is another example combining scalar and expand value directives:***
 
-## Topic View Specification: `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>/<expand(/value)>`
-
-![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/expand.png)
+##### Topic View Specification:
+##### `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>/<expand(/value)>`
 
 ## Step 4: Dynamic branching and routing of Kafka events firehose
 As new events are coming in from the Kafka firehose, Diffusion is dynamically branching and routing the currency pairs to the right subscriber.
@@ -61,7 +61,12 @@ As new events are coming in from the Kafka firehose, Diffusion is dynamically br
 
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
 
+##### `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>`
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20path.png)
+
+##### `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>/<expand(/value)>`
+![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/expand.png)
+
 
 ## Suggested: 6 Leasons Using Topic Views
 ### Lesson 1: [Mapping Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-1.mapping-topics/)
