@@ -72,7 +72,7 @@ As new events are coming in from the Kafka firehose, Diffusion is dynamically br
 ## Suggested: 6 Leasons Using Topic Views
 ### Lesson 1: [Mapping Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-1.mapping-topics/)
 ### Lesson 2: [Mapping Topic Branches](https://www.pushtechnology.com/blog/tutorial/using-topic-views-2.mapping-topic-branches/)
-### Lesson 3: [Lesson 3: Extracting Source Topic Values](https://www.pushtechnology.com/blog/tutorial/using-topic-views-3.-extracting-source-topic-values/)
+### Lesson 3: [Extracting Source Topic Values](https://www.pushtechnology.com/blog/tutorial/using-topic-views-3.-extracting-source-topic-values/)
 ### Lesson 4: [Throttling Reference Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-4.throttling-reference-topics/)
 ### Lesson 5: [Naming Reference Topic With Topic Content](https://www.pushtechnology.com/blog/tutorial/using-topic-views-5.naming-reference-topic-with-topic-content/)
 ### Lesson 6: [Changing Topic Properties Of Reference Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-6.changing-topic-properties-of-reference-topics/)
