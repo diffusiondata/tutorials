@@ -15,7 +15,7 @@ These JavaScript code examples will help you publish fx events on real-time from
 # APIs used to build the publisher app
 
 ## **Step 1: Connect to Diffusion**
-### [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
+### [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://dashboard.diffusion.cloud)
 ```js
 diffusion.connect({
 	host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway.eu.diffusion.cloud"
@@ -27,7 +27,7 @@ diffusion.connect({
 ```js
 session.topics.add(_fxTopic, diffusion.topics.TopicType.JSON);
 ```
-### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
+### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://dashboard.diffusion.cloud)
 We are setting up `_fxTopic` with the topic path: `diffusion.fx`
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L1/images/topics.png)
 
