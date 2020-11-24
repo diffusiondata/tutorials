@@ -92,3 +92,6 @@ You can also leave the default values and connect to our sandbox service:
 
 Really easy, just open the index.html file locally and off you go!
 
+# Go to Lesson 2
+
+[Click here](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L2) to go to lesson 2.
