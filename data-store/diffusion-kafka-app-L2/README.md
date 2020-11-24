@@ -127,3 +127,4 @@ Really easy, just open the index.html file locally and off you go!
 # Go to Lesson 3
 
 [Click here](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L3) to go to lesson 3.
+**diffusion-kafka-app-L3** introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) and topic [path permissions](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/security/permissions_reference.html) for fine-grained security management of your data structure. It also shows how to Subscribe to fx data using [Diffusion Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) in order to consume what you need, not all the Kafka stream.
