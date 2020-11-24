@@ -95,3 +95,5 @@ Really easy, just open the index.html file locally and off you go!
 # Go to Lesson 2
 
 [Click here](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L2) to go to lesson 2.
+**diffusion-kafka-app-L2** introduces the concept of [Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html), a dynamic mechanism to map part of a server's [Topic Tree](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_tree.html) to another. This enables real-time data transformation before sending it to subscribed clients as well as to create dynamic data models based on on-the-fly data (eg: Kafka firehose data).
+This lesson also shows how to Subscribe to fx data using Diffusion Topic Views in order to consume what you need, not all the Kafka stream.
