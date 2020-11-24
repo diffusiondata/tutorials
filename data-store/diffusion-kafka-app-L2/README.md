@@ -16,7 +16,7 @@ This lesson also shows how to Subscribe to fx data using Diffusion Topic Views i
 # Features used in this lesson
 
 ## Step 1: Configure Kafka Adapter in Cloud
-### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter > Ingest from Kafka](https://management.ad.diffusion.cloud/#!/login)
+### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter > Ingest from Kafka](https://dashboard.diffusion.cloud)
 [![Kafka Adapter Video](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/ingest.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
 ```
 Adapters > Kafka Adapter > Ingest_from_Kafka Config:
@@ -29,7 +29,7 @@ Adapters > Kafka Adapter > Ingest_from_Kafka Config:
 ```
 
 ## Step 2: Check the Kafka stream is ingested
-### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
+### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://dashboard.diffusion.cloud)
 We can see the events from `kafka.firehose.fx` Kafka topic (we set up on previous step) is now being published to Diffusion topic path: `kafka.firehose.fx`. If there are no new events, it might be because the `kafka.firehose.fx` topic has not received any updates from Kafka.
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/kafka%20firehose.png)
