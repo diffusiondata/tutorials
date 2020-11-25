@@ -1,4 +1,4 @@
-# diffusion-kafka-app-L3
+# Lesson 3: Security with Topic-level access control
 
 Introduction to Diffusion Real-Time Event Stream through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud and Apache Kafka.
 
@@ -11,8 +11,8 @@ These JavaScript code examples will help you publish fx events on real-time from
 
 # APIs used in the secure subscriber application
 
-## **Step 1: Connect to Diffusion**
-### [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
+## **Step 1: Connect to Diffusion with user: `GBP:EUR Subscriber`**
+### [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://dashboard.diffusion.cloud)
 ```js
 diffusion.connect({
 	host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway.eu.diffusion.cloud"
@@ -32,7 +32,7 @@ session.addStream(_fxTopic, diffusion.datatypes.json());
 session.select(_fxTopic);
 ```
 ## **Step 4: Create a new Role**
-### Go to: [Diffusion Cloud > Manage Service > Console > Security](https://management.ad.diffusion.cloud/#!/login)
+### Go to: [Diffusion Cloud > Manage Service > Console > Security](https://dashboard.diffusion.cloud)
 We will create a new role called `GBP:EUR` and we will give 'read only' access to a specific topic path: `kafka/fx/GBP:EUR`. This means, any user with `GBP:EUR` role, will only be able to subscribe to new values coming from Kafka firehose when the pairName is `GBP:EUR`
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L3/images/roles.png)

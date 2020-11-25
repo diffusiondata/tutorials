@@ -1,4 +1,4 @@
-# diffusion-kafka-app-L2
+# Lesson 2: Fine-grained distribution of Kafka event firehose with Topic Views
 
 Introduction to Diffusion Real-Time Event Stream through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud and Apache Kafka.
 
@@ -16,7 +16,7 @@ This lesson also shows how to Subscribe to fx data using Diffusion Topic Views i
 # Features used in this lesson
 
 ## Step 1: Configure Kafka Adapter in Cloud
-### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter > Ingest from Kafka](https://management.ad.diffusion.cloud/#!/login)
+### Go to: [Diffusion Cloud > Manage Service > Adapters > Kafka Adapter > Ingest from Kafka](https://dashboard.diffusion.cloud)
 [![Kafka Adapter Video](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/ingest.png)](https://www.pushtechnology.com/blog/how-to-build-a-real-time-messaging-app-using-diffusion/)
 ```
 Adapters > Kafka Adapter > Ingest_from_Kafka Config:
@@ -29,7 +29,7 @@ Adapters > Kafka Adapter > Ingest_from_Kafka Config:
 ```
 
 ## Step 2: Check the Kafka stream is ingested
-### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
+### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://dashboard.diffusion.cloud)
 We can see the events from `kafka.firehose.fx` Kafka topic (we set up on previous step) is now being published to Diffusion topic path: `kafka.firehose.fx`. If there are no new events, it might be because the `kafka.firehose.fx` topic has not received any updates from Kafka.
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/kafka%20firehose.png)
@@ -44,15 +44,14 @@ We are going to `map` `kafka.firehose.fx` stream (we set up on previous step) `t
 
 ***This Topic View will take care of dynamic branching and routing of event streams in real-time, by only sending the specific currency pair, the Kafka stream consumer is subscribed to, and not the whole stream.***
 
-**Specification: `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>`**
+##### Topic View Specification:
+##### `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>`
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20views.png)
 
-***This is another example combining scalar and expand value directives:***
-
-Specification: `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>/<expand(/value)>`
-
-![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/expand.png)
+***Alternatively, this is another example combining scalar and expand value directives used for dynamic branching and routing of event streams in real-time:***
+##### Topic View Specification:
+##### `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>/<expand(/value)>`
 
 ## Step 4: Dynamic branching and routing of Kafka events firehose
 As new events are coming in from the Kafka firehose, Diffusion is dynamically branching and routing the currency pairs to the right subscriber.
@@ -61,12 +60,19 @@ As new events are coming in from the Kafka firehose, Diffusion is dynamically br
 
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
 
+##### The following image shows a Topic View for the following specification:
+##### `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>`
 ![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/topic%20path.png)
 
-## Suggested: 6 Leasons Using Topic Views
+##### Alternatively, the following image shows a Topic View for the following specification:
+##### `map kafka.firehose.fx to kafka/fx/<scalar(/value/pairName)>/<expand(/value)>`
+![](https://github.com/pushtechnology/tutorials/blob/master/data-store/diffusion-kafka-app-L2/images/expand.png)
+
+
+## Suggested: 6 Lessons Using Topic Views
 ### Lesson 1: [Mapping Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-1.mapping-topics/)
 ### Lesson 2: [Mapping Topic Branches](https://www.pushtechnology.com/blog/tutorial/using-topic-views-2.mapping-topic-branches/)
-### Lesson 3: [Lesson 3: Extracting Source Topic Values](https://www.pushtechnology.com/blog/tutorial/using-topic-views-3.-extracting-source-topic-values/)
+### Lesson 3: [Extracting Source Topic Values](https://www.pushtechnology.com/blog/tutorial/using-topic-views-3.-extracting-source-topic-values/)
 ### Lesson 4: [Throttling Reference Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-4.throttling-reference-topics/)
 ### Lesson 5: [Naming Reference Topic With Topic Content](https://www.pushtechnology.com/blog/tutorial/using-topic-views-5.naming-reference-topic-with-topic-content/)
 ### Lesson 6: [Changing Topic Properties Of Reference Topics](https://www.pushtechnology.com/blog/tutorial/using-topic-views-6.changing-topic-properties-of-reference-topics/)
@@ -118,3 +124,7 @@ You can also leave the default values and connect to our sandbox service:
 
 Really easy, just open the index.html file locally and off you go!
 
+# Go to Lesson 3
+
+[Click here](https://github.com/pushtechnology/tutorials/tree/master/data-store/diffusion-kafka-app-L3) to go to lesson 3.
+**diffusion-kafka-app-L3** introduces the concept of [Security](https://docs.pushtechnology.com/docs/6.5.1/manual/html/designguide/security/c_security.html) and topic [path permissions](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/security/permissions_reference.html) for fine-grained security management of your data structure. It also shows how to Subscribe to fx data using [Diffusion Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html) in order to consume what you need, not all the Kafka stream.
