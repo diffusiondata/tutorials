@@ -1,4 +1,4 @@
-# diffusion-kafka-app-L1
+# Lesson 1: Publish event streams to Kafka cluster
 
 Introduction to Diffusion Real-Time Event Stream through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud and Apache Kafka.
 
