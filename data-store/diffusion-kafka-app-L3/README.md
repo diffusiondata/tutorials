@@ -1,4 +1,4 @@
-# diffusion-kafka-app-L3
+# Lesson 3: Security with Topic-level access control
 
 Introduction to Diffusion Real-Time Event Stream through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud and Apache Kafka.
 
