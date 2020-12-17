@@ -15,55 +15,98 @@ In Diffusion, data is stored and distributed through Topics. Session can subscri
 # APIs used in this application
 
 ## **Step 1: Connect to Diffusion**
-### [Diffusion.sessions()](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
+### [SessionFactory](https://docs.pushtechnology.com/docs/6.6.0-preview.1/android/com/pushtechnology/diffusion/client/session/SessionFactory.html) > [*create your host*](https://management.ad.diffusion.cloud/)
 Provided an Activity where we received userName, password, and difussionService (its URL) as part of the intent:
 ```java
 /* Session must be set in the Activity's onCreate function */
 protected void onCreate(Bundle savedInstanceState) {
-	/* sessionHandler is a private class where we handle the session, described in the next Step*/
+	/* sessionHandler is a private class where we handle the session, described in the NEXT STEP */
     private SessionHandler sessionHandler = null;
 	...
 	
-	Diffusion.sessions()
-	        .principal(this.userName)
-	        .password(this.password)
+	Diffusion.sessions() //The sessions factory implementation
+	        .principal(this.userName) //The username to validate to the service
+	        .password(this.password) // The password
 	        // And we pass the sessionHandler instance to the session.
-	        .open("ws://" + this.diffusionService, this.sessionHandler);
+	        .open("ws://" + this.diffusionService, this.sessionHandler); //This is the funtion that actually opens a connection to the server
 	        /* Use your Diffusion service or connect to our sandbox "diffusionchatapp.eu.diffusion.cloud" */
     ...
 }
 ```
 ## **Step 2: Create a Topic**
-### [session.topics.add](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/topiccontrol.html#add)
-```js
-session.topics.add(_roomTopic, diffusion.topics.TopicType.JSON);
+### [session.topics.addTopic](https://docs.pushtechnology.com/docs/6.6.0-preview.1/android/com/pushtechnology/diffusion/client/features/control/topics/TopicControl.html#addTopic-java.lang.String-com.pushtechnology.diffusion.client.topics.details.TopicType-)
+```java
+/* This is the SessionHandler class to handle the diffusion service session */
+private class SessionHandler implements SessionFactory.OpenCallback {
+	/**
+         * This function is called when the session is Opened
+         * In this function we create the topic, and subscribe to it.
+         * Subscribing to it will allow us to listen to everything streamed into the Topic's channel
+         * @param session This is the session we created in the Activity's constructor
+         */
+        @Override
+        public void onOpened(Session session) {
+        	this.session = session;
+
+            // Here is where we add the topic to the session
+            this.session.feature(TopicControl.class).addTopic(
+                    this.chatRoomName,
+                    TopicType.JSON
+            );
+
+            // Attach a Stream to listen for updates (Step 3)
+            ...
+        }
+}
 ```
 ### Go to: [Diffusion Cloud > Manage Service > Console > Topics](https://management.ad.diffusion.cloud/#!/login)
-We are seeting up `_roomTopic` with the topic path: `Chat/Default Room`
+We are seeting up `chatRoomName` with the topic path: `Chat/Default Room`
 ![](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/images/topics.png)
 
 ## **Step 3: Create a Topic Listener**
-### [session.addStream](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/session.html#addstream)
-```js
-session.addStream(_roomTopic, diffusion.datatypes.json());
+In the **onOpened** function of the SessionHandlerClass, add the Stream we want to listen to
+### [session.addStream](https://docs.pushtechnology.com/docs/6.6.0-preview.1/android/com/pushtechnology/diffusion/client/features/Topics.html#addStream-java.lang.String-java.lang.Class-com.pushtechnology.diffusion.client.features.Topics.ValueStream-)
+```java
+// Attach a Stream to listen for updates
+this.session.feature(Topics.class).addStream(this.chatRoomName, JSON.class, new Topics.ValueStream.Default<JSON>() {                
+    /**
+     * This function gets called when new data is read from the Topic's channel
+     * @param topicPath
+     * @param topicSpec
+     * @param oldValue
+     * @param newValue
+     */
+    @Override
+    public void onValue(String topicPath, TopicSpecification topicSpec, JSON oldValue, JSON newValue) {
+        System.out.println("New value for" + topicPath + ": " + newValue.toJsonString());
+        try {
+            receiveMessage(newValue);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+    }
+});	
 ```
 ## **Step 4: Subscribe to a Topic**
-### [session.select](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/session.html#select)
-```js
-session.select(_roomTopic);
+Also from inside the **onOpened** function and **after** we started listening to the Stream, we subscribe to the topic. **chatRoomName**, was previously fed to the Activity via intent:
+### [session.subscribe](https://docs.pushtechnology.com/docs/6.6.0-preview.1/android/com/pushtechnology/diffusion/client/features/control/topics/SubscriptionControl.html)
+```java
+// And we finally subscribe to the topic
+this.session.feature(Topics.class).subscribe(this.chatRoomName);
 ```
 ## **Step 5: Update a Topic**
-### [session.topicUpdate.set](https://docs.pushtechnology.com/docs/6.5.1/js/interfaces/topicupdate.html#set)
-```js
-session.topicUpdate.set(_roomTopic, diffusion.datatypes.json(),
-	{
-		text: msg,
-		name: name,
-		timestamp: new Date().toLocaleTimeString()
-	});
+### [session.topicUpdate.set](https://docs.pushtechnology.com/docs/6.6.0-preview.1/android/com/pushtechnology/diffusion/client/features/TopicUpdate.html)
+```java
+// Convert it to a JSON value
+final JSON value = jsonDataType.fromJsonString(message.toString());
+
+// Now we send the message
+final CompletableFuture<?> result = this.sessionHandler.
+    getSession().feature(TopicUpdate.class).
+    set(this.sessionHandler.getSessionTopicName(), JSON.class, value);
 ```
 # The code in action
-[![Video Tutorial](https://github.com/pushtechnology/tutorials/blob/master/messaging/diffusion-msg-app-L1/images/code-example.png)](https://youtu.be/tTx8q4oPx7E?t=336)
+[![Video Tutorial](https://github.com/sebas-pushtechnology/diffusion-tutorials/blob/main/messaging/android/images/tutorial_l1.png)](https://youtu.be/tTx8q4oPx7E?t=336)
 
 # Pre-requisites
 
@@ -76,11 +119,33 @@ session.topicUpdate.set(_roomTopic, diffusion.datatypes.json(),
 
 # Setup
 
-Make sure to add Diffusion library to your code. For JavaScript, we have added the following line in our `public/chat.html`:
+Download the Diffusion [Android client](https://download.pushtechnology.com/clients/6.6.0-preview.1/android/diffusion-android-6.6.0-preview.1.jar).
+
+In Android Studio, create a new project using API Level 19 or later, then copy the diffusion-android-6.6.0-preview.1.jar file to the app/libs directory in your project.
+
+Find the library by expanding the app/libs folder in the left-hand panel (the Project Tool Window). If the libs folder is not shown in the left-hand panel, use the pull-down menu at the top of the panel to select the Project view.
+
+Right-click on the jar, select **Add as Library...** then accept the default library settings.
+
+Right-click on the libs folder in the Project Tool Window, then select Add as Library. If the libs folder is not shown in the left-hand panel, use the pull-down menu at the top of the panel to select Project view.
+
+Add the following code to the build.gradle file within your project:
+
+```java
+compileOptions {
+  sourceCompatibility JavaVersion.VERSION_1_8
+  targetCompatibility JavaVersion.VERSION_1_8
+ }
 ```
-<script src='https://download.pushtechnology.com/clients/6.5.1/js/diffusion-6.5.1.js'></script>
+
+In your project's `app/src/main/AndroidManifest.xml`, set the INTERNET permission.
+
+```java
+<uses-permission android:name="android.permission.INTERNET"/>;
 ```
-Set lines 44-46 of `public/js/app.js` to the hostname of your Diffusion Cloud service, which you can find in your service dashboard.
+
+Al that's left to do, is to add you own credentials to the Difussion.session() command, as done in the ChatActivity.java file.
+
 You can also leave the default values and connect to our sandbox service:
 * host: host ("diffusionchatapp.eu.diffusion.cloud" by default)
 * user: 'user'
@@ -88,4 +153,4 @@ You can also leave the default values and connect to our sandbox service:
 
 # Execution
 
-Really easy, just open the index.html file locally and off you go!
+Use Android Studio's Run or Debug features to run the App.
