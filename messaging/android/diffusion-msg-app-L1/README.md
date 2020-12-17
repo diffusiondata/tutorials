@@ -15,7 +15,7 @@ In Diffusion, data is stored and distributed through Topics. Session can subscri
 # APIs used in this application
 
 ## **Step 1: Connect to Diffusion**
-### [diffusion.connect](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
+### [Diffusion.sessions()](https://docs.pushtechnology.com/docs/6.5.1/js/globals.html#connect) > [*create your host*](https://management.ad.diffusion.cloud/)
 Provided an Activity where we received userName, password, and difussionService (its URL) as part of the intent:
 ```java
 /* Session must be set in the Activity's onCreate function */
