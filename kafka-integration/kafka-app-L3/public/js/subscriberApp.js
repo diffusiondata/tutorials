@@ -2,7 +2,7 @@ let _session = null;
 let _fxTopic = null;
 
 // get query params from url
-let host = getQueryVariable("host") || "kafkagateway.us.diffusion.cloud";
+let host = getQueryVariable("host") || "kafkagateway-eu.eu.diffusion.cloud";
 
 // update h1 title on the kafka2diffusion.html page
 document.getElementById("room-title").innerText = 'Ingest FX data from Kafka';
@@ -27,7 +27,7 @@ var chart = JSC.chart('chartDiv', {
 	xAxis: { scale_type: 'time'  },
 	series: [
 	  {
-		name: 'bid',
+		name: 'open',
 		points: []
 	  }
 	]
@@ -39,16 +39,16 @@ parametersForm.onsubmit = (evt) => {
 	evt.preventDefault();
 	
 	let input = parametersForm.querySelector("[name='currency']");
-	let currency = input.value;
+	let currency = input.value; // currency format is as shown here. eg: GBP.USD
 
 	// define your fx stream: number of fx JSON packages and frequency of update
-	_fxTopic = "kafka/fx/" + currency;
+	_fxTopic = "FXPairs.tier2." + currency; // currency format is as shown here. eg: GBP.USD
  
     // Connect to your Diffusion service, or leave this values and connect to our sandbox
     // Sign up to Diffusion Cloud and get your service up a running in a minute.
     diffusion.connect({
-        host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway.us.diffusion.cloud"
-        principal : "GBP:EUR Subscriber", // This user only have access to a specific topic path: "kafka/fx/GBP:EUR"
+        host : host, // Use your Diffusion service or connect to our sandbox "kafkagateway-eu.eu.diffusion.cloud"
+        principal : "admin", // This user only have access to a specific topic path: "FXPairs.tier2.GBP.USD"
         credentials : "password"
     }).then(
         (session) => {
@@ -80,7 +80,8 @@ parametersForm.onsubmit = (evt) => {
 // Display a fx values received by Diffusion
 function displayMessage(topic, specification, newValue, oldValue) {
     
-    let msg = newValue.get();
+	let msg = newValue.get();
+	let timestamp = new Date().getTime();
 
     // insert messages in container
     let container = document.getElementById("messages");
@@ -88,10 +89,10 @@ function displayMessage(topic, specification, newValue, oldValue) {
 	entry.classList.add("list-group-item");
 
 	let header = document.createElement("strong");
-	header.innerText = "partition: " + msg.partition + "  |  key: " + msg.key + "  |  fx value: " + msg.value.pairName;
+	header.innerText = "partition: " + msg.partition + "  |  key: " + msg.key + "  |  timestamp: " + timestamp;
 	
 	let content = document.createElement("p");
-	content.innerText = "timestamp: " + msg.value.timestamp + "  |  bid: " + msg.value.bid + "  |  offer: " + msg.value.offer;
+	content.innerText = "open: " + msg.value.open + "  |  high: " + msg.value.high + "  |  low: " + msg.value.low;
 
 	entry.appendChild(header);
 	entry.appendChild(content);
@@ -101,7 +102,7 @@ function displayMessage(topic, specification, newValue, oldValue) {
 	container.scrollTop = container.scrollHeight - container.clientHeight;
 
 	// passing x,y points to JSCharting to graph fx
-	chart.series(0).points.add({  y:parseFloat(msg.value.bid),  x:msg.value.timestamp },{shift: useShift});
+	chart.series(0).points.add({  y:parseFloat(msg.value.open),  x:timestamp },{shift: useShift});
 }
 
 // function to shift points in fx graph
