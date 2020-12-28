@@ -1,4 +1,4 @@
-# Lesson 2: Fine-grained distribution of Kafka event firehose with Topic Views
+# Fine-grained distribution of Kafka event firehose with Topic Views
 
 Introduction to Diffusion Real-Time Event Stream through a simple application using [Diffusion](https://www.pushtechnology.com/product-overview) Cloud and Apache Kafka.
 
