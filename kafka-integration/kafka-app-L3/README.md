@@ -9,7 +9,7 @@ These JavaScript code examples will help you publish fx events on real-time from
 
 ![](https://github.com/pushtechnology/tutorials/blob/master/kafka-integration/kafka-app-L3/images/kafkaL2.png)
 
-# Lesson 2: Fine-grained distribution of Kafka event firehose with Topic Views
+# Fine-grained distribution of Kafka event firehose with Topic Views
 **diffusion-kafka-app-L2** introduces the concept of [Topic Views](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_views.html), a dynamic mechanism to map part of a server's [Topic Tree](https://docs.pushtechnology.com/docs/6.5.2/manual/html/designguide/data/topictree/topic_tree.html) to another. This enables real-time data transformation before sending it to subscribed clients as well as to create dynamic data models based on on-the-fly data (eg: Kafka firehose data).
 This lesson also shows how to Subscribe to fx data using Diffusion Topic Views in order to consume what you need, not all the Kafka stream.
 
