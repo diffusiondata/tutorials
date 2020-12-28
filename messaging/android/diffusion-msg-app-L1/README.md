@@ -144,7 +144,7 @@ In your project's `app/src/main/AndroidManifest.xml`, set the INTERNET permissio
 <uses-permission android:name="android.permission.INTERNET"/>;
 ```
 
-Al that's left to do, is to add you own credentials to the Difussion.session() command, as done in the ChatActivity.java file.
+All that's left to do, is to add you own credentials to the Difussion.session() command, as done in the ChatActivity.java file.
 
 You can also leave the default values and connect to our sandbox service:
 * host: host ("diffusionchatapp.eu.diffusion.cloud" by default)
